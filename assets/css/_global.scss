@@ -1,0 +1,225 @@
+// paths
+$path-images: "../assets/images";
+
+// ANIMATION ====================================================================================================
+
+// fancy transitions
+$move-whip: cubic-bezier(0.8, 0, 0.3, 1);
+$move-snap: cubic-bezier(0.7, -0.5, 0.3, 1.5);
+$move-snap-in: cubic-bezier(0.6, -0.3, 0.7, 0);
+$move-snap-out: cubic-bezier(0.2, 0.9, 0.3, 1.3);
+
+@mixin transition($property, $speed: .2s, $anim: linear ){
+  transition-property: $property;
+  transition-duration: $speed;
+  transition-timing-function: $anim;
+}
+
+// anchor
+a{
+  @include transition(color, .5s);
+}
+
+// TYPOGRAPHY ====================================================================================================
+
+%text-gap{
+  margin-bottom:$text-gap-mobile;
+  @include break(small) {
+    margin-bottom:$text-gap;
+  }
+}
+
+%text-gap-tight{
+  margin-bottom:$text-gap-mobile;
+  @include break(small) {
+    margin-bottom:$text-gap-tight;
+  }
+}
+
+
+// LAYOUT AND GRID ====================================================================================================
+
+@mixin panel{
+  width:100vw;
+}
+
+@mixin container{
+  width:100vw;
+  margin:0 auto;
+  max-width:$site-width;
+  padding:0 $padding-sides;
+}
+
+.panel{
+  @include panel;
+}
+
+.container{
+  @include container;
+}
+
+// simple grid layouts
+
+@mixin grid($howmanycols: 2/3, $gap: 1.5rem, $break: medium) {
+  @include break($break) {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-gap: $gap;
+    @if $howmanycols == 2 {
+      grid-template-columns: 1fr 1fr;
+    } @else if $howmanycols == 3 {
+      grid-template-columns: 1fr 1fr 1fr;
+    } @else if $howmanycols == 4 {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    } @else if $howmanycols == 1-3 {
+      grid-template-columns: 1fr 2fr;
+    } @else if $howmanycols == 2-3 {
+      grid-template-columns: 2fr 1fr;
+    } @else if $howmanycols == 1-4 {
+      grid-template-columns: 1fr 3fr;
+    } @else if $howmanycols == 3-4 {
+      grid-template-columns: 3fr 1fr;
+    }
+  }
+}
+
+// grid classes
+
+.grid{
+  &--2{
+    @include grid(2, 3rem);
+  }
+  &--1-2{
+    @include grid(1-2, 3rem);
+  }
+  &--3{
+    @include grid(3, 3rem);
+  }
+}
+
+.grid-tight{
+  &--2{
+    @include grid(2, 1.5rem);
+  }
+  &--1-2{
+    @include grid(1-2, 1.5rem);
+  }
+  &--3{
+    @include grid(3, 1.5rem);
+  }
+}
+
+// Aspect ratios
+$aspect_1-1: 100%;
+$aspect_16-9: 56.25%;
+$aspect_4-3: 75%;
+$aspect_3-2: 66.66%;
+$aspect_8-5: 62.5%;
+
+// Align
+@mixin align-left{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+}
+@mixin align-left-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+}
+@mixin align-left-bottom{
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-start;
+}
+@mixin align-center{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+@mixin align-center--baseline{
+    display:flex;
+    align-items:baseline;
+    justify-content:center;
+}
+@mixin align-center-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+}
+@mixin align-center-bottom{
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+
+@mixin align-right{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+}
+@mixin align-right-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+}
+@mixin align-right-bottom{
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-end;
+}
+
+
+// GLOBAL ELEMENTS AND CLASSES =====================================================================================
+
+p, ul, ol{
+  padding:0;
+  margin:0;
+  line-height:$line-height;
+  list-style:none;
+}
+
+// anchor
+a{
+  text-decoration: none;
+  color:inherit;
+}
+
+// text highlight
+::selection {
+  background:$color-accent;
+}
+
+// headings
+h1, h2, h3, h4, h5{
+  font-size:$font-size-std;
+  font-weight:$std;
+  line-height:$line-height--tight;
+  margin:0;
+  padding:0;
+}
+
+// icons
+.icon{
+  use{
+  }
+}
+
+// screen reader only
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+// text no break
+.nobreak{
+  white-space: nowrap;
+}
+
+// 

@@ -1,0 +1,50 @@
+---
+layout: post
+author: Barry
+permalink: setup-browsersync
+title: Setup Browsersync
+hero_image_path: https://cdn-images-1.medium.com/max/1600/1*0fO_9XRhUB_kscnnbBVUcA.gif
+hero_image_alt: Devices running browsersync
+categories: [how_to_become_a_web_designer]
+---
+
+With each web page, device and browser, testing time grows exponentially. From live reloads to URL pushing, form replication to click mirroring, Browsersync cuts out repetitive manual tasks. It’s like an extra pair of hands. Customise an array of sync settings from the UI or command line to create a personalised test environment. Need more control? Browsersync is easily integrated with your web platform, build tools, and other Node.js projects.
+<!--more-->
+
+### Key Feature
+
+* Scroll on one browser; other browsers follow the scroll to the same point
+* Click links; other browsers load the clicked URL
+* Fill out & submit forms; other browsers submit
+* Test responsive designs; see your site rendered on different devices at one time
+* Change HTML, CSS & JS; automatically inject those new files without a page refresh
+* Extra: BrowserSync is compatible with many task runners like GULP and Grunt. And they work across many operating systems.
+
+First off, BrowserSync creates a small server, but if you already have a server setup, BrowserSync can hook into that server and act as a proxy. Next, it injects a javascript file on every page; This file makes use of WebSockets to communicate between the server and the client to watch changes to your code or browser action. As soon as BrowserSync detects an action it performs a page reload.
+
+BrowserSync is an npm package, as such it needs Node.js installed. To install BrowserSync globally.
+
+### BrowserSync and Gulp task-runner
+
+First install globally gulp in your project then create a browser sync instance.like this flowing code
+
+```javascript
+var bs = require(‘browser-sync’).create(); //
+gulp.task(‘browser-sync’, function() {
+ bs.init({
+ server: {
+ baseDir: “./”
+ }
+ });
+});
+```
+> And run this comment : gulp browser-sync
+
+### How does BrowserSync Work?
+
+First off, BrowserSync creates a small server, but if you already have a server setup, BrowserSync can hook into that server and act as a proxy. Next, it injects a javascript file on every page; This file makes use of WebSockets to communicate between the server and the client to watch changes to your code or browser action. As soon as BrowserSync detects an action it performs a page reload.
+
+
+
+
+

@@ -1,0 +1,87 @@
+---
+layout: default
+---
+
+{% assign content_array = page.content | split: site.excerpt_separator %}
+{% assign excerpt_only = content_array | first %}
+{% assign content_remainder = content_array | last %}
+
+
+<article class="article">
+
+{% include progress-indicator.html %}
+
+  <div class="hero-post panel">
+    <div class="hero-post__main container">
+      <div class="hero-post__breadcrumb breadcrumb">
+        <a class="breadcrumb__item" href="/">Home</a>
+        <svg class="icon breadcrumb__arrow">
+          <use xlink:href="assets/svg/icons.svg#icon-arrow-down--thick" />
+        </svg>
+        <a class="breadcrumb__item" href="/">
+          {{ page.title }}
+        </a>
+      </div>
+
+      <h1 class="hero-post__title">
+        {{ page.title }}
+      </h1>
+      <div class="hero-post__post-meta post-meta">
+        <div class="post-meta__item">
+          Written by <span class="post-meta__name">{{ page.author }}</span>
+        </div>
+        <div class="post-meta__item">
+          Last updated <span class="post-meta__date">{{ page.date | date_to_string }}</span>
+        </div>
+      </div>
+
+      <div class="hero-post__intro">
+        {{ excerpt_only | append: '</p>'}}
+      </div>
+      <div class="grid--1-2">
+        <div class="hero-post__image">
+          <img src="{{ page.hero_image_path }}" alt="{{ page.hero_image_alt }}" />
+        </div>
+        <div class="hero-post__col">
+          <div class="guide-feature-horiz">
+            <div class="guide-feature-horiz__inner">
+              <div class="guide-feature-horiz__content">
+                <h4 class="guide-feature-horiz__title">
+                  <span class="guide-feature-horiz__title__tagline"
+                    >From the guide:
+                  </span>
+                  <a
+                    href="pillar.html"
+                    class="guide-feature-horiz__title__title"
+                    >How to become a web designer</a
+                  >
+                </h4>
+                <a href="pillar.html" class="button button--small"
+                  >Go to guide</a
+                >
+              </div>
+              <div class="guide-feature-horiz__image">
+                <a href="pillar.html">
+                  <img
+                    src="assets/images/web-design-thumb.jpg"
+                    class="guide-feature-horiz__image"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article__content">
+    <div class="container">
+      <div class="post-content__section__content body-content">
+        
+        {{ content_remainder | remove_first: '</p>'}}
+
+      </div>
+    </div>
+  </div>
+</article>
