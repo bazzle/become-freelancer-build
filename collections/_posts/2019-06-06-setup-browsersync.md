@@ -3,9 +3,12 @@ layout: post
 author: Barry
 permalink: setup-browsersync
 title: Setup Browsersync
-hero_image_path: https://cdn-images-1.medium.com/max/1600/1*0fO_9XRhUB_kscnnbBVUcA.gif
+hero_image: browsersync.gif
 hero_image_alt: Devices running browsersync
 categories: [how_to_become_a_web_designer]
+guide_image: web-design-thumb.jpg
+guide_title: How to become a Web Designer
+guide_link: how-to-become-a-web-designer
 ---
 
 With each web page, device and browser, testing time grows exponentially. From live reloads to URL pushing, form replication to click mirroring, Browsersync cuts out repetitive manual tasks. It’s like an extra pair of hands. Customise an array of sync settings from the UI or command line to create a personalised test environment. Need more control? Browsersync is easily integrated with your web platform, build tools, and other Node.js projects.

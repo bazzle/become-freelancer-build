@@ -1,18 +1,16 @@
 ---
 layout: default
 title: How to become a Web Designer
+slug: become_web
 author: Barry
 permalink: how-to-become-a-web-designer
-hero_image_path: https://cdn-images-1.medium.com/max/1600/1*0fO_9XRhUB_kscnnbBVUcA.gif
-hero_image_alt: Devices running Grunt
+last_updated: 06 Jun 2019
+hero_image: browsersync.gif
+hero_image_alt: Devices running browsersync
 intro: Short into about the page. Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio. Short into about the page. Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio. doloribus asperiores repellat. At vero eos et accusamus et iusto odio.
 ---
 
-<div class="progress-indicator">
-  <div class="progress-container">
-    <div class="progress-bar" id="myBar"></div>
-  </div>
-</div>
+{% include progress-indicator.html %}
 
 <div class="page-nav hidden">
   <div class="container page-nav__inner">
@@ -61,7 +59,7 @@ intro: Short into about the page. Ut aut reiciendis voluptatibus maiores alias c
       </h1>
       <div class="hero-pillar__post-meta post-meta">
         <div class="post-meta__item">Written by <span class="post-meta__name">{{ page.author }}</span></div>
-        <div class="post-meta__item">Last updated <span class="post-meta__date">{{ page.date | date_to_string }}</span></div>
+        <div class="post-meta__item">Last updated <span class="post-meta__date">{{ page.last_updated }}</span></div>
       </div>
 
       <div class="hero-pillar__intro">
@@ -81,7 +79,7 @@ intro: Short into about the page. Ut aut reiciendis voluptatibus maiores alias c
             </ul>
           </div>
           <div class="contents-image__image">
-            <img src="assets/images/web-design.jpg" alt="screen"/>
+            <img src="{{ site.url }}/assets/images/{{ page.hero_image }}" alt="{{ page.hero_image_alt }}"/>
           </div>
         </div>
       </div>
@@ -96,7 +94,9 @@ intro: Short into about the page. Ut aut reiciendis voluptatibus maiores alias c
 
 </section>
 
-  {% for section in site.become_web_designer %}
+  {% assign sorted_sections = site.become_web_designer | sort:"date" | reverse %}
+
+  {% for section in sorted_sections %}
 
     <section class="pillar-section panel pillar-section--{{ section.style }}" id="{{ section.slug }}">
       <div class="container">
