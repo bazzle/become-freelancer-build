@@ -3,6 +3,8 @@ collections_dir: collections
 collections:
   become_web_designer:
     output: true
+  become_writer:
+    output: true
 
 excerpt_separator: <!--more-->
 title: Become a Freelancer

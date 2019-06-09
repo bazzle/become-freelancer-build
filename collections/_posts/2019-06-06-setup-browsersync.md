@@ -5,7 +5,6 @@ permalink: setup-browsersync
 title: Setup Browsersync
 hero_image: browsersync.gif
 hero_image_alt: Devices running browsersync
-categories: [how_to_become_a_web_designer]
 guide_image: web-design-thumb.jpg
 guide_title: How to become a Web Designer
 guide_link: how-to-become-a-web-designer
