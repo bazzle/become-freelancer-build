@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/become_web_designer/2019-06-03-books-to-buy.html</loc>
+<lastmod>2019-06-03T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/become_web_designer/2019-06-04-setup.html</loc>
+<lastmod>2019-06-04T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/become_web_designer/2019-06-05-what-is-web-design.html</loc>
+<lastmod>2019-06-05T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/setup-browsersync</loc>
+<lastmod>2019-06-06T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/setup-grunt</loc>
+<lastmod>2019-06-06T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/how-to-become-a-web-designer</loc>
+</url>
+<url>
+<loc>http://localhost:4000/about</loc>
+</url>
+<url>
+<loc>http://localhost:4000/blog</loc>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
+</urlset>
