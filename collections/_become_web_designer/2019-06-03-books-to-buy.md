@@ -2,7 +2,7 @@
 title: Books to Buy
 slug: books-to-buy
 style: style-3
-menu_links:
+section_links:
  Setup Browsersync: "setup-browsersync"
  Setup Grunt: "setup-grunt"
 ---

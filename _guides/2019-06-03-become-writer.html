@@ -1,7 +1,6 @@
 ---
 layout: default
 title: How to become a Writer
-slug: become_writer
 author: Rob
 permalink: how-to-become-a-writer
 last_updated: 06 Jun 2019
@@ -106,13 +105,13 @@ intro: Short into about the page. Ut aut reiciendis voluptatibus maiores alias c
             {{ section.content | markdownify }}
           </div>
         
-          {% if section.menu_links %}
+          {% if section.section_linkss %}
             <div class="pillar-section__links">
               <h3 class="pillar-section__links__title">Section links</h3>
               <ul class="pillar-section__links__list">
-                {% for menu_link in section.menu_links %}
+                {% for section_links in section.section_linkss %}
                 <li>
-                  <a href="{{ site.url }}/{{ menu_link[1] }}">{{ menu_link[0] }}</a>
+                  <a href="{{ site.url }}/{{ section_links[1] }}">{{ section_links[0] }}</a>
                 </li>
               {% endfor %}
               </ul>
