@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-07T18:20:37+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Become a Freelancer</title><subtitle>Simply how to become a freelancer. Focussing on how to become a writer or web designer.</subtitle><entry><title type="html">Setup Browsersync</title><link href="http://localhost:4000/setup-browsersync" rel="alternate" type="text/html" title="Setup Browsersync" /><published>2019-06-06T00:00:00+01:00</published><updated>2019-06-06T00:00:00+01:00</updated><id>http://localhost:4000/setup-browsersync</id><content type="html" xml:base="http://localhost:4000/setup-browsersync">&lt;p&gt;With each web page, device and browser, testing time grows exponentially. From live reloads to URL pushing, form replication to click mirroring, Browsersync cuts out repetitive manual tasks. It’s like an extra pair of hands. Customise an array of sync settings from the UI or command line to create a personalised test environment. Need more control? Browsersync is easily integrated with your web platform, build tools, and other Node.js projects.
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;key-feature&quot;&gt;Key Feature&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Scroll on one browser; other browsers follow the scroll to the same point&lt;/li&gt;
+  &lt;li&gt;Click links; other browsers load the clicked URL&lt;/li&gt;
+  &lt;li&gt;Fill out &amp;amp; submit forms; other browsers submit&lt;/li&gt;
+  &lt;li&gt;Test responsive designs; see your site rendered on different devices at one time&lt;/li&gt;
+  &lt;li&gt;Change HTML, CSS &amp;amp; JS; automatically inject those new files without a page refresh&lt;/li&gt;
+  &lt;li&gt;Extra: BrowserSync is compatible with many task runners like GULP and Grunt. And they work across many operating systems.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;First off, BrowserSync creates a small server, but if you already have a server setup, BrowserSync can hook into that server and act as a proxy. Next, it injects a javascript file on every page; This file makes use of WebSockets to communicate between the server and the client to watch changes to your code or browser action. As soon as BrowserSync detects an action it performs a page reload.&lt;/p&gt;
+
+&lt;p&gt;BrowserSync is an npm package, as such it needs Node.js installed. To install BrowserSync globally.&lt;/p&gt;
+
+&lt;h3 id=&quot;browsersync-and-gulp-task-runner&quot;&gt;BrowserSync and Gulp task-runner&lt;/h3&gt;
+
+&lt;p&gt;First install globally gulp in your project then create a browser sync instance.like this flowing code&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;‘&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;browser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sync&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;‘&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;browser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sync&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;nx&quot;&gt;bs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+ &lt;span class=&quot;na&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;na&quot;&gt;baseDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;“&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;”&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;And run this comment : gulp browser-sync&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;how-does-browsersync-work&quot;&gt;How does BrowserSync Work?&lt;/h3&gt;
+
+&lt;p&gt;First off, BrowserSync creates a small server, but if you already have a server setup, BrowserSync can hook into that server and act as a proxy. Next, it injects a javascript file on every page; This file makes use of WebSockets to communicate between the server and the client to watch changes to your code or browser action. As soon as BrowserSync detects an action it performs a page reload.&lt;/p&gt;</content><author><name>Barry</name></author><summary type="html">With each web page, device and browser, testing time grows exponentially. From live reloads to URL pushing, form replication to click mirroring, Browsersync cuts out repetitive manual tasks. It’s like an extra pair of hands. Customise an array of sync settings from the UI or command line to create a personalised test environment. Need more control? Browsersync is easily integrated with your web platform, build tools, and other Node.js projects.</summary></entry><entry><title type="html">Setup Grunt</title><link href="http://localhost:4000/setup-grunt" rel="alternate" type="text/html" title="Setup Grunt" /><published>2019-06-06T00:00:00+01:00</published><updated>2019-06-06T00:00:00+01:00</updated><id>http://localhost:4000/setup-grunt</id><content type="html" xml:base="http://localhost:4000/setup-grunt">&lt;p&gt;With each web page, device and browser, testing time grows exponentially. From live reloads to URL pushing, form replication to click mirroring, Browsersync cuts out repetitive manual tasks. It’s like an extra pair of hands. Customise an array of sync settings from the UI or command line to create a personalised test environment. Need more control? Browsersync is easily integrated with your web platform, build tools, and other Node.js projects.
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;key-feature&quot;&gt;Key Feature&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Scroll on one browser; other browsers follow the scroll to the same point&lt;/li&gt;
+  &lt;li&gt;Click links; other browsers load the clicked URL&lt;/li&gt;
+  &lt;li&gt;Fill out &amp;amp; submit forms; other browsers submit&lt;/li&gt;
+  &lt;li&gt;Test responsive designs; see your site rendered on different devices at one time&lt;/li&gt;
+  &lt;li&gt;Change HTML, CSS &amp;amp; JS; automatically inject those new files without a page refresh&lt;/li&gt;
+  &lt;li&gt;Extra: BrowserSync is compatible with many task runners like GULP and Grunt. And they work across many operating systems.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;First off, BrowserSync creates a small server, but if you already have a server setup, BrowserSync can hook into that server and act as a proxy. Next, it injects a javascript file on every page; This file makes use of WebSockets to communicate between the server and the client to watch changes to your code or browser action. As soon as BrowserSync detects an action it performs a page reload.&lt;/p&gt;
+
+&lt;p&gt;BrowserSync is an npm package, as such it needs Node.js installed. To install BrowserSync globally.&lt;/p&gt;
+
+&lt;h3 id=&quot;browsersync-and-gulp-task-runner&quot;&gt;BrowserSync and Gulp task-runner&lt;/h3&gt;
+
+&lt;p&gt;First install globally gulp in your project then create a browser sync instance.like this flowing code&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;‘&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;browser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sync&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;‘&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;browser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sync&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;nx&quot;&gt;bs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+ &lt;span class=&quot;na&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;na&quot;&gt;baseDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;“&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;”&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;And run this comment : gulp browser-sync&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;how-does-browsersync-work&quot;&gt;How does BrowserSync Work?&lt;/h3&gt;
+
+&lt;p&gt;First off, BrowserSync creates a small server, but if you already have a server setup, BrowserSync can hook into that server and act as a proxy. Next, it injects a javascript file on every page; This file makes use of WebSockets to communicate between the server and the client to watch changes to your code or browser action. As soon as BrowserSync detects an action it performs a page reload.&lt;/p&gt;</content><author><name>Barry</name></author><summary type="html">With each web page, device and browser, testing time grows exponentially. From live reloads to URL pushing, form replication to click mirroring, Browsersync cuts out repetitive manual tasks. It’s like an extra pair of hands. Customise an array of sync settings from the UI or command line to create a personalised test environment. Need more control? Browsersync is easily integrated with your web platform, build tools, and other Node.js projects.</summary></entry></feed>
