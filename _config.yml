@@ -8,7 +8,7 @@ collections:
 
 excerpt_separator: <!--more-->
 title: Become a Freelancer
-image-path: assets/images/logo@2x.png
+#image-path: assets/images/logo@2x.png
 image-alt: Become a Freelancer logo
 description: Simply how to become a freelancer. Focussing on how to become a writer or web designer.
 exclude: [assets/css, gruntfile.js, package.json, node_modules]

@@ -3,6 +3,7 @@
     align-items:center;
     font-size:$tiny;
     &__item{
+        color:$white;
         display:block;
         padding:0 1em;
         &:first-of-type{
@@ -13,5 +14,6 @@
         transform:rotate(-90deg);
         width:10px;
         height:10px;
+        color:$white;
     }
 }

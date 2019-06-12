@@ -1,9 +1,125 @@
 ---
-title: Home
 layout: default
+title: How to become a Freelancer
+author: Rob and Barry
+last_updated: 06 Jun 2019
+hero_image: browsersync.gif
+hero_image_alt: Devices running browsersync
+intro: Short into about the page. Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio. Short into about the page. Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio. doloribus asperiores repellat. At vero eos et accusamus et iusto odio.
 ---
-<div class="hero panel">
-  <div class="hero__content container">
-    <p>Homepage under construction</p>
+
+{% include progress-indicator.html %}
+
+<div class="page-nav hidden">
+  <div class="container page-nav__inner">
+    <div class="page-nav__dropdown__outer page-nav-trigger" role="button">
+      <div role="button" class="page-nav__button">
+        On this page
+        <svg class="page-nav__button__icon">
+          <use xlink:href="assets/svg/icons.svg#icon-arrow-down--thick" />
+        </svg>
+      </div>
+      <div class="page-nav__dropdown hidden">
+        <ul class="contents-image__contents__list">
+          {% for section in site.become_writer %}
+            <li><a href="#{{ section.slug }}">{{ section.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <a href="#" class="page-nav__backtop" role="button">
+        Back to top
+        <svg class="page-nav__backtop__icon">
+          <use xlink:href="assets/svg/icons.svg#icon-arrow-down--thick" />
+        </svg>
+    </a>
   </div>
 </div>
+
+
+
+
+
+
+<section class="hero-pillar panel">
+
+    <div class="hero-pillar__main container">
+      <div class="hero-pillar__breadcrumb breadcrumb">
+        <a class="breadcrumb__item" href="/">Home</a>
+        <svg class="icon breadcrumb__arrow">
+          <use xlink:href="assets/svg/icons.svg#icon-arrow-down--thick" />
+        </svg>
+        <a class="breadcrumb__item" href="{{site.url}}/{{ page.permalink }}">{{ page.title }}</a>
+      </div>
+
+      <h1 class="hero-pillar__title">
+        {{ page.title }}
+      </h1>
+      <div class="hero-pillar__post-meta post-meta">
+        <div class="post-meta__item">Written by <span class="post-meta__name">{{ page.author }}</span></div>
+        <div class="post-meta__item">Last updated <span class="post-meta__date">{{ page.last_updated }}</span></div>
+      </div>
+
+      <div class="hero-pillar__intro">
+          {{ page.intro }}
+      </div>
+    </div>
+
+    <div class="hero-pillar__contents-image contents-image">
+      <div class="container">
+        <div class="contents-image__inner">
+          <div class="contents-image__contents">
+            <h3 class="contents-image__contents__title">On this page</h3>
+            <ul class="contents-image__contents__list">
+              {% for section in site.become_writer %}
+                <li><a href="#{{ section.slug }}">{{ section.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="contents-image__image">
+            <img src="{{ site.url }}/assets/images/{{ page.hero_image }}" alt="{{ page.hero_image_alt }}"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-pillar__cta">
+      <div class="container">
+        <a class="button" href="#">Download PDF</a>
+        <a class="button" href="#">Download Audio transcript</a>
+      </div> 
+    </div>
+
+</section>
+
+  {% assign sorted_sections = site.become_writer | sort:"date" | reverse %}
+
+  {% for section in sorted_sections %}
+
+    <section class="pillar-section panel pillar-section--{{ section.style }}" id="{{ section.slug }}">
+      <div class="container">
+        <div class="pillar-section__inner">
+          <h2 class="pillar-section__title">{{ section.title }}</h2>
+          <div class="pillar-section__content body-content">
+            {{ section.content | markdownify }}
+          </div>
+        
+          {% if section.section_linkss %}
+            <div class="pillar-section__links">
+              <h3 class="pillar-section__links__title">Section links</h3>
+              <ul class="pillar-section__links__list">
+                {% for section_links in section.section_linkss %}
+                <li>
+                  <a href="{{ site.url }}/{{ section_links[1] }}">{{ section_links[0] }}</a>
+                </li>
+              {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </section>
+
+  {% endfor %}
+
+

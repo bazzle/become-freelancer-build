@@ -1,4 +1,5 @@
 .hero-post{
+  background-color:$color-hero-bg;
   padding-top:$text-gap-mobile;
   padding-bottom:$text-gap-mobile;
   @include break(medium) {
@@ -7,45 +8,44 @@
     display:flex;
     flex-direction:column;
     justify-content:space-around;
-    height:calc(100vh - #{$header-height});
-    min-height:900px;
+    min-height:calc(100vh - #{$header-height});
     max-height:1100px;
   }
-  &__breadcrumb{
+  &__title{
+    @include title-display($white);
     margin-bottom:$text-gap-mobile;
     @include break(small) {
-      margin-bottom:$text-gap-tight;
+      margin-bottom:$text-gap;
     }
   }
-  &__title{
-      margin-bottom:$text-gap-mobile;
-      margin-bottom:$text-gap-tight;
-      @include title-display;
-  }
   &__post-meta{
+    color:$white;
     margin-bottom:$text-gap-mobile;
     @include break(small) {
       margin-bottom:$text-gap;
     }
   }
   &__intro{
+    color:$white;
     margin-bottom:$text-gap-mobile;
     width:100%;
     max-width:1000px;
     @include break(small) {
-      margin-bottom:$text-gap-tight;
+      margin-bottom:$text-gap;
     }
   }
   &__breadcrumb{
+    margin-top:0;
     margin-bottom:$text-gap-mobile;
     @include break(small) {
+      margin-top:0;
       margin-bottom:$text-gap-tight;
     }
   }
   &__image{
-    margin-bottom:$text-gap-mobile;
+    margin-bottom:0;
     @include break(small) {
-      margin-bottom:$text-gap-mobile;
+      margin-bottom:0;
     }
   }
   &__cta{

@@ -1,8 +1,11 @@
 .mobile-menu{
   $bgcolor:$color-primary;
   display:block;
-  background-color:$bgcolor;
+  background-color:$white;
   color:$white;
+  a{
+    color:$white;
+  }
   height:auto;
   width:100%;
   position:absolute;
@@ -25,9 +28,9 @@
   }
   &__group{
     &:last-of-type{
-      background-color:rgba($black, .3);
-      border-top:1px solid rgba($white, .3);
-      border-bottom:1px solid rgba($black, .3);
+      .mobile-menu__item{
+        background-color:darken($bgcolor, 5);
+      }
     }
     &__title{
       font-size:$tiny;
@@ -36,13 +39,11 @@
     }
   }
   &__item{
+    background-color:$bgcolor;
     display:block;
     padding:2rem;
     border-top:1px solid rgba($white, .3);
     border-bottom:1px solid rgba($black, .3);
-    &:first-of-type{
-      border-top:0;
-    }
   }
   @include break(medium) {
     display:none;

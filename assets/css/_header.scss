@@ -1,6 +1,6 @@
 .header{
     position:fixed;
-    background-color:$white;
+    background-color:$color-feint;
     width:100%;
     z-index:10;
     &__inner{
@@ -14,10 +14,12 @@
         &__image{
             width:60px;
             height:60px;
+            margin-right:1em;
         }
         &__title{
-            margin-left:1em;
+            font-family:$font-brand;
             font-weight:$bold;
+            font-size:1.4em;
         }
     }
     &__trigger{
@@ -46,6 +48,9 @@
         }
         &__item{
             margin-left:2em;
+            a{
+                @include link-styled;
+            }
         }
     }
 }

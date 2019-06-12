@@ -6,9 +6,14 @@
   &__contents{
     padding:3rem;
     &__title{
-      font-weight:$bold;
       @include title(s3);
       @extend %text-gap-tight;
+      color:$black;
+    }
+    &__list{
+      a{
+        @include link-styled;
+      }
     }
   }
   &__image{

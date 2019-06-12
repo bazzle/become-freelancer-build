@@ -1,20 +1,15 @@
 .guide-feature-horiz{
-    background-color:$white;
+    background-color:$color-feint;
     padding:$text-gap-tight;
     @include text-tiny;
     &__inner{
         @include grid(2, $text-gap-tight, small);
     }
-    &__tagline{
-        text-transform:uppercase;
-    }
     &__title{
         margin-bottom:$text-gap-tight;
         &__tagline{
-            text-transform:uppercase;
-            display:block;
+            @extend %tagline;
             margin-bottom:$text-gap-tight;
-            font-size:.8em;
         }
         &__title{
             font-weight:$bold;
@@ -31,16 +26,11 @@
     &__inner{
         @include grid(2, $text-gap, small);
     }
-    &__tagline{
-        text-transform:uppercase;
-    }
     &__title{
         margin-bottom:$text-gap;
         &__tagline{
-            text-transform:uppercase;
-            display:block;
+            @extend %tagline;
             margin-bottom:$text-gap-tight;
-            @include text-tiny;
         }
         &__title{
             font-weight:$bold;

@@ -1,8 +1,11 @@
 // Project specific mixins and variables
 
+// paths
+$path-images: "../assets/images";
+
 // layout ==============================================
 
-$site-width:1400px;
+$site-width:1600px;
 $padding-sides:5vw;
 
 // standard margin
@@ -11,19 +14,39 @@ $margin-std:1.5rem;
 
 // colors ==============================================
 
-$color-primary:$gray40;
-$color-secondary:$gray60;
+$color-primary:#0982C3;
+$color-primary-feint:lighten($color-primary, 40);
+$color-secondary:#62319C;
+$color-secondary-feint:lighten($color-secondary, 50);
 $color-accent:gold;
 $color-feint:#f2f2f2;
 
+// backgrounds
+$color-hero-bg:$color-primary;
+
+// link color
+$color-link:$color-secondary;
+$color-text:$black;
+
+// button colour
+$color-button:$color-secondary;
+
+// Headings
+$color-heading:$color-primary;
+$color-body-heading:$color-secondary;
+
+// taglines
+$color-tagline:$black;
+
 // font loading
-//@import url();
+@import url('https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 // typography ==============================================
 
-$font-brand:sans-serif;
-$font-std:sans-serif;
-$font-display:sans-serif;
+$font-brand:'Muli', sans-serif;
+$font-std:'Lato', sans-serif;
+$font-display:'Muli', sans-serif;
 
 // font-size;
 $font-size-base:62.5%;
@@ -31,10 +54,10 @@ $font-size-mobile:1.6rem;
 $font-size-std:1.8rem;
 
 // font weights
-$thin:400;
+$thin:300;
 $std:400;
-$bold:600;
-$extrabold:600;
+$bold:800;
+$extrabold:900;
 
 // font sizes
 $tiny:.8em;
@@ -63,21 +86,11 @@ $titlelevels: (
     text-decoration-color: $color;
 }
 
-// text display
-@mixin text-display($font-size){
-  font-family:$font-display;
-  font-weight:$bold;
-  font-size:$font-size;
-  line-height: 1.4;
-  p{
-    line-height: 1.4;
-  }
-}
-
 // title display
-@mixin title-display{
+@mixin title-display($color:$color-heading){
     font-size:4rem;
-    font-weight:$bold;
+    font-weight:$extrabold;
+    color:$color;
     @include break(small) {
       font-size:6rem;
     }
@@ -108,7 +121,7 @@ $titlelevels: (
     font-weight:$bold;
   }
   h1, h2, h3, h4, h5{
-    color:$black;
+    color:$color-primary;
     padding:0;
     margin:0;
     margin-bottom:$text-gap;
@@ -126,17 +139,19 @@ $titlelevels: (
     margin-bottom:$text-gap;
   }
   ul{
-    padding-left:1em;
     box-sizing:border-box;
   }
   li{
     width:calc(100% - 1em);
     list-style:none;
     position:relative;
+    padding-left:1.5em;
     &:before{
       content:'\25A0';
       color:$color-secondary;
-      margin-right:.5em;
+      position:absolute;
+      left:0;
+      top:0;
     }
   }
   & > *:last-child{
@@ -150,18 +165,7 @@ $titlelevels: (
 $header-height:80px;
 $header-height-mobile:80px;
 
-
-// syled links =========================================
-
-@mixin link-styled{
-  @include text-underline($color-secondary);
-  font-weight:$bold;
-}
-
 // misc styles =========================================
-
-// link color
-$link-color:$black;
 
 // text shadow
 $text-shadow-std: 1px 1px 2px $black;
@@ -179,7 +183,7 @@ $border-accent-feint: rgba($color-secondary, 0.2) solid 1px;
 // html ================================================
 
 html {
-  font-family: $font-brand;
+  font-family: $font-std;
   font-size:$font-size-base;
 }
 
@@ -191,24 +195,6 @@ body {
   }
   line-height:$line-height;
   color:$black;
-}
-
-// header
-.header{
-  position:fixed;
-  height:$header-height-mobile;
-  @include break(small) {
-      height:$header-height;
-  }
-}
-
-// main
-.main{
-  position:relative;
-  padding-top:$header-height-mobile;
-  @include break(small) {
-      padding-top:$header-height;
-  }
 }
 
 

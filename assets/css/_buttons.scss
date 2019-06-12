@@ -31,22 +31,22 @@
     text-align:center;
     position:relative;
     text-decoration:none!important;
-    background-color:$color-primary;
+    background-color:$color-button;
     color:$white;
-    @include btn-state($color-primary, $white);
+    @include btn-state($color-button, $white);
     @include break(small){
         padding:1em 1.3em;
     }
     &--alt{
         background-color:$white;
-        color:$color-primary;
+        color:$color-button;
         @include btn-state($white, $color-secondary);
     }
     &--outline{
         background-color:transparent;
-        color:$color-primary;
-        border:$color-primary 1px solid;
-        @include btn-state($color-primary, $white);
+        color:$color-button;
+        border:$color-button 1px solid;
+        @include btn-state($color-button, $white);
     }
     // for buttons with lots of things inside that need to be aligned
     &__inner{

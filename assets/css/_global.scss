@@ -1,5 +1,22 @@
-// paths
-$path-images: "../assets/images";
+// HEADER ====================================================================================================
+
+.header{
+  position:fixed;
+  height:$header-height-mobile;
+  @include break(small) {
+      height:$header-height;
+  }
+}
+
+// main
+.main{
+  position:relative;
+  padding-top:$header-height-mobile;
+  @include break(small) {
+      padding-top:$header-height;
+  }
+}
+
 
 // ANIMATION ====================================================================================================
 
@@ -20,7 +37,7 @@ a{
   @include transition(color, .5s);
 }
 
-// TYPOGRAPHY ====================================================================================================
+// LAYOUT AND GRID ====================================================================================================
 
 %text-gap{
   margin-bottom:$text-gap-mobile;
@@ -35,9 +52,6 @@ a{
     margin-bottom:$text-gap-tight;
   }
 }
-
-
-// LAYOUT AND GRID ====================================================================================================
 
 @mixin panel{
   width:100vw;
@@ -170,6 +184,17 @@ $aspect_8-5: 62.5%;
 }
 
 
+// GLOBAL MIXINS AND INCLUDES =====================================================================================
+
+// tagline
+.tagline, %tagline{
+  color:$color-tagline;
+  text-transform:uppercase;
+  display:block;
+  font-size:.8em;
+}
+
+
 // GLOBAL ELEMENTS AND CLASSES =====================================================================================
 
 p, ul, ol{
@@ -179,10 +204,29 @@ p, ul, ol{
   list-style:none;
 }
 
+// lists
+ul{
+  li{
+    margin-bottom:1em;
+    @include break(small) {
+      margin-bottom:.5em;
+    }
+  }
+}
+
 // anchor
 a{
   text-decoration: none;
-  color:inherit;
+  color:$color-primary;
+}
+
+// syled links
+
+@mixin link-styled($color:$black, $border-color:$color-primary ){
+  font-weight:$bold;
+  color:$color;
+  border-bottom:.1em solid $border-color;
+  display:inline-block;
 }
 
 // text highlight
@@ -192,11 +236,15 @@ a{
 
 // headings
 h1, h2, h3, h4, h5{
+  font-family:$font-display;
+  color:$color-heading;
   font-size:$font-size-std;
-  font-weight:$std;
   line-height:$line-height--tight;
   margin:0;
   padding:0;
+  a{
+    color:$color-heading;
+  }
 }
 
 // icons

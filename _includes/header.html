@@ -1,7 +1,9 @@
 <header class="header">
   <div class="container header__inner">
     <a href="/" class="header__logo-lockup">
+      {% if site.image-path %}
       <img class="header__logo-lockup__image" src="{{ site.image-path }}" alt="{{ site.image-alt }}">
+      {% endif %}
       <div class="header__logo-lockup__title">{{ site.title }}</div>
     </a>
     <nav class="header__menu">

@@ -1,6 +1,7 @@
 // hero on pillar page
 
 .hero-pillar{
+  background-color:$color-hero-bg;
   padding-top:$text-gap-mobile;
   padding-bottom:$text-gap-mobile;
   @include break(medium) {
@@ -20,22 +21,26 @@
     }
   }
   &__title{
-      margin-bottom:$text-gap-mobile;
-      margin-bottom:$text-gap-tight;
-      @include title-display;
+    @include title-display($white);
+    margin-bottom:$text-gap-mobile;
+    @include break(small) {
+      margin-bottom:$text-gap;
+    }
   }
   &__post-meta{
+    color:$white;
     margin-bottom:$text-gap-mobile;
     @include break(small) {
       margin-bottom:$text-gap;
     }
   }
   &__intro{
+    color:$white;
     margin-bottom:$text-gap-mobile;
     width:100%;
     max-width:1000px;
     @include break(small) {
-      margin-bottom:$text-gap-tight;
+      margin-bottom:$text-gap;
     }
   }
   &__breadcrumb{
