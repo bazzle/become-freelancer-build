@@ -1,0 +1,7 @@
+<div class="body-content__outset-image">
+{% if include.external %}
+<img src="{{ include.file }}" alt="{{ include.alt }}" />
+{% else %}
+<img src="{{site.url}}/assets/images/{{ include.file }}" alt="{{ include.alt }}" />
+{% endif %}
+</div>

@@ -1,9 +1,13 @@
 .header{
     position:fixed;
-    background-color:$color-feint;
+    background-color:$color-header-bg;
     width:100%;
     z-index:10;
+    display:flex;
+    @include align(center, center);
     &__inner{
+        width:100%;
+        max-width:$site-width;
         display:flex;
         align-items:center;
         height:100%;

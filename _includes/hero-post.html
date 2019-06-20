@@ -1,0 +1,62 @@
+<div class="hero-post panel">
+
+    <div class="hero-post__main panel__container">
+      <div class="panel__inner">
+
+          <div class="hero-post__breadcrumb breadcrumb">
+            <a class="breadcrumb__item" href="/">Home</a>
+            <svg class="icon breadcrumb__arrow">
+              <use xlink:href="assets/svg/icons.svg#icon-arrow-down--thick" />
+            </svg>
+            <a class="breadcrumb__item" href="/">
+              {{ page.title }}
+            </a>
+          </div>
+
+          <h1 class="hero-post__title">
+            {{ page.title }}
+          </h1>
+
+          <div class="hero-post__post-meta post-meta">
+            <div class="post-meta__item">
+              Written by <span class="post-meta__name">{{ page.author }}</span>
+            </div>
+            <div class="post-meta__item">
+              Last updated <span class="post-meta__date">{{ page.date | date_to_string }}</span>
+            </div>
+          </div>
+
+          <div class="hero-post__intro">
+            {{ excerpt_only | append: '</p>'}}
+          </div>
+
+          <div class="grid--1-2">
+            <div class="hero-post__image">
+              <img src="{{site.url}}/assets/images/{{ page.hero_image }}" alt="{{ page.hero_image_alt }}" />
+            </div>
+            <div class="hero-post__col">
+              <div class="guide-feature-horiz">
+                <div class="guide-feature-horiz__inner">
+                  <div class="guide-feature-horiz__content">
+                    <h4 class="guide-feature-horiz__title">
+                      <span class="guide-feature-horiz__title__tagline"
+                        >From the guide:
+                      </span>
+                      <a href="{{ page.guide_link }}" class="guide-feature-horiz__title__title">{{ page.guide_title }}</a>
+                    </h4>
+                      <a href="{{ page.guide_link }}" class="button button--small">Go to guide</a>
+                  </div>
+                  <div class="guide-feature-horiz__image">
+                    <a href="{{ page.guide_link }}">
+                      <img src="{{site.url}}/assets/images/{{ page.guide_image }}" class="guide-feature-horiz__image" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </div>
+
+</div>

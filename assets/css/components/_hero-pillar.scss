@@ -1,0 +1,97 @@
+// hero on pillar page
+
+.hero-pillar{
+  $color-from:$color-primary;
+  $color-to:$color-secondary;
+  $color-text:$white;
+  background-color:$color-from;
+  position:relative;
+  height:100%;
+  min-height:calc(100vh - #{$header-height});
+  color:$color-primary;
+  border-bottom:20px solid $color-to;
+  @include break(medium) {
+    min-height:0;
+  }
+  &__title-intro{
+    padding-top:$text-gap;
+    padding-bottom:$text-gap;
+    @include break(medium) {
+      padding-top:$text-gap-deep;
+      padding-bottom:$text-gap-deep;
+    }
+  }
+  &__bg{
+    background-image: linear-gradient($color-from, $color-to);
+    padding-bottom:$text-gap;
+    @include break(medium) {
+      padding-bottom:$text-gap-deep;
+    }
+  }
+  &__inner{
+  }
+  &__breadcrumb{
+    color:$color-text;
+    a{
+      color:$color-text;
+    }
+    margin-bottom:$text-gap-mobile;
+    @include break(small) {
+      margin-bottom:$text-gap;
+    }
+  }
+  &__title{
+    margin-bottom:$text-gap-mobile;
+    @include title-display(s3, $color-text);
+    @include break(small) {
+      @include title-display(s1, $color-text);
+      margin-bottom:$text-gap;
+    }
+  }
+  &__post-meta{
+    color:$color-text;
+    margin-bottom:$text-gap-mobile;
+    @include break(small) {
+      margin-bottom:$text-gap;
+    }
+  }
+  &__intro{
+    color:$color-text;
+    width:100%;
+    max-width:$content-width;
+    p{
+      @include text-leadin(2rem);
+      @include break(small) {
+        @include text-leadin;  
+      }
+    }
+  }
+  &__breadcrumb{
+    margin-bottom:$text-gap-mobile;
+    @include break(small) {
+      margin-bottom:$text-gap-tight;
+    }
+  }
+  &__contents-image{
+    margin-bottom:$text-gap-mobile;
+    @include break(small) {
+      margin-bottom:0;
+      //max-width:$content-width;
+    }
+  }
+  &__arrow-icon{
+    position:absolute;
+    bottom:-45px;
+    left:50%;
+    transform:translate(-25px);
+    display:block;
+    width:50px;
+    height:25px;
+    color:$color-to;
+  }
+  &__cta{
+    .button{
+      margin-bottom:$text-gap-tight;
+    }
+  }
+}

@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     svgstore: {
       options: {
         prefix : 'icon-',
-        includedemo: true
+        includedemo: false
       },
       default: {
         files: {
@@ -86,7 +86,7 @@ module.exports = function(grunt) {
     },
     watch: {
       css: {
-        files: ["assets/css/*.scss"],
+        files: ["assets/css/**/*.scss"],
         tasks: ["sass"]
       }
     }

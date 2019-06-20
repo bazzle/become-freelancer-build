@@ -1,43 +1,47 @@
 <header class="header">
-  <div class="container header__inner">
-    <a href="/" class="header__logo-lockup">
-      {% if site.image-path %}
-      <img class="header__logo-lockup__image" src="{{ site.image-path }}" alt="{{ site.image-alt }}">
-      {% endif %}
-      <div class="header__logo-lockup__title">{{ site.title }}</div>
-    </a>
-    <nav class="header__menu">
-      {% for item in site.data.nav-guides %}
-        <div class="header__menu__item">
-          <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
-            {{ item.name }}
-          </a>
-        </div>
-      {% endfor %}
+  <div class="container">
+  <div class="header__inner">
+      <a href="/" class="header__logo-lockup">
+        {% if site.image-path %}
+        <img class="header__logo-lockup__image" src="{{ site.image-path }}" alt="{{ site.image-alt }}">
+        {% endif %}
+        <div class="header__logo-lockup__title">{{ site.title }}</div>
+      </a>
+
+      <nav class="header__menu">
+        {% for item in site.data.nav-guides %}
+          <div class="header__menu__item">
+            <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
+              {{ item.name }}
+            </a>
+          </div>
+        {% endfor %}
+      </nav>
+
+      <a href="#" class="header__trigger trigger-menu" role="button">
+          <svg class="icon header__trigger__icon">
+            <use xlink:href="assets/svg/icons.svg#icon-menu" />
+          </svg>
+          <span class="header__trigger__label">Menu</span>
+      </a>
+
+    <nav class="mobile-menu close">
+      <div class="mobile-menu__group">
+        {% for item in site.data.nav-main %}
+        <a href="{{ item.link }}" class="mobile-menu__item">
+          <span>{{ item.name }}</span>
+        </a>
+        {% endfor %}
+      </div>
+      <div class="mobile-menu__group">
+        {% for item in site.data.nav-guides %}
+        <a href="{{ item.link }}" class="mobile-menu__item">
+          <span>{{ item.name }}</span>
+        </a>
+        {% endfor %}
+      </div>
     </nav>
 
-    <a href="#" class="header__trigger trigger-menu" role="button">
-        <svg class="icon header__trigger__icon">
-          <use xlink:href="assets/svg/icons.svg#icon-menu" />
-        </svg>
-        <span class="header__trigger__label">Menu</span>
-    </a>
+    </div>
   </div>
-
-  <nav class="mobile-menu close">
-    <div class="mobile-menu__group">
-      {% for item in site.data.nav-main %}
-      <a href="{{ item.link }}" class="mobile-menu__item">
-        <span>{{ item.name }}</span>
-      </a>
-      {% endfor %}
-    </div>
-    <div class="mobile-menu__group">
-      {% for item in site.data.nav-guides %}
-      <a href="#" class="mobile-menu__item">
-        <span>{{ item.name }}</span>
-      </a>
-      {% endfor %}
-    </div>
-  </nav>
 </header>

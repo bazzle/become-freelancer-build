@@ -1,8 +1,6 @@
 .footer{
   background-color:$gray20;
   color:$white;
-  padding-top:$margin-std;
-  padding-bottom:$margin-std;
   &__row{
     width:100%;
     padding-top:$text-gap-mobile;
@@ -10,13 +8,19 @@
       @include grid(2-3);
       padding-top:$text-gap;
     }
+    &:first-of-type{
+      border-bottom:1px solid lighten($black, 10);
+    }
     &:last-of-type{
-      border-top:1px solid $white;
+      border-top:1px solid lighten($black, 30);
     }
   }
   &__links{
     display:flex;
     flex-direction:column;
+    a{
+      color:$white;
+    }
     @extend %text-gap;
     &__title{
       font-size:$tiny;

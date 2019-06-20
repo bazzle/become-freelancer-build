@@ -1,0 +1,22 @@
+.floating-snippet{
+  background-color:$white;
+  position:relative;
+  margin-bottom:$text-gap-mobile;
+  width:100%;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  background-color:$white;
+  padding:$text-gap-mobile;
+  z-index:1;
+  @include break(medium) {
+    padding:$text-gap;
+    margin-bottom:0;
+  }
+  p{
+    margin-bottom:0;
+  }
+  &__title{
+    @include title(s3);
+    margin-bottom:$text-gap;
+  }
+}

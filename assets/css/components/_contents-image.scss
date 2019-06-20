@@ -1,0 +1,40 @@
+.contents-image{
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  background-color:$white;
+  &__inner{
+    @include break(medium) {
+      @include grid(2-3, 1.5rem);
+    }
+  }
+  &__contents{
+    padding:$text-gap-tight;
+    @include break(small) {
+      order:2;
+      padding:$text-gap;
+    }
+    &__title{
+      @include title(s3);
+      color:$black;
+      margin-bottom:$text-gap-mobile;
+      @include break(small) {
+        margin-bottom:$text-gap-tight;
+      }
+    }
+    &__list{
+      a{
+        @include link-styled;
+      }
+    }
+  }
+  &__image{
+    @include break(small) {
+     order:1; 
+    }
+    img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+  }
+}

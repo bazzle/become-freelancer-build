@@ -1,6 +1,8 @@
 livereload: false
 collections_dir: collections
 collections:
+  homepage:
+    output: true
   become_web_designer:
     output: true
   become_writer:

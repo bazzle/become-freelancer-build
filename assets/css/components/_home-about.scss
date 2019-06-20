@@ -1,0 +1,12 @@
+.home-about{
+  background-color:$color-feint-3;
+  &__inner{
+    padding-top:$text-gap;
+    padding-bottom:$text-gap;
+    @include break(small) {
+      padding-top:$text-gap;
+      padding-bottom:$text-gap-deep;
+    }
+    @extend %text-body;
+  }
+}

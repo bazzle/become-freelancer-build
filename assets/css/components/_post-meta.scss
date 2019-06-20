@@ -5,6 +5,7 @@
   &__item{
       display:block;
       padding:0 .5em;
+      color:inherit;
       &:first-of-type{
           padding-left:0;
       }

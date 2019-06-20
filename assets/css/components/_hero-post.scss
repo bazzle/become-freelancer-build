@@ -1,15 +1,14 @@
+// hero on post page
+
 .hero-post{
-  background-color:$color-hero-bg;
-  padding-top:$text-gap-mobile;
-  padding-bottom:$text-gap-mobile;
-  @include break(medium) {
-    padding-top:$text-gap;
-    padding-bottom:$text-gap;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-around;
-    min-height:calc(100vh - #{$header-height});
-    max-height:1100px;
+  background-color:$color-feint;
+  position:relative;
+  height:100%;
+  min-height:calc(100vh - #{$header-height});
+  color:$color-primary;
+  border-bottom:20px solid $color-secondary;
+  @include break(small) {
+    min-height:0;
   }
   &__title{
     @include title-display($white);
@@ -29,7 +28,7 @@
     color:$white;
     margin-bottom:$text-gap-mobile;
     width:100%;
-    max-width:1000px;
+    max-width:$content-width;
     @include break(small) {
       margin-bottom:$text-gap;
     }

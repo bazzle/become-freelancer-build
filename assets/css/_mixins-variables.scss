@@ -6,11 +6,23 @@ $breakpoints: (
     large: 1280px,
     xlarge: 1440px,
 );
+$breakpoints--h: (
+    letterbox: 900px,
+);
 
 // breakpoint mixins
 @mixin break($breakpoint) {
     @if map-has-key($breakpoints, $breakpoint) {
         @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}
+
+// height 
+@mixin break--h($breakpoint) {
+    @if map-has-key($breakpoints--h, $breakpoint) {
+        @media screen and (max-height: map-get($breakpoints--h, $breakpoint)) and (orientation: landscape) {
             @content;
         }
     }
@@ -66,6 +78,66 @@ $line-feint:1px solid $black-lighten;
       font-size:calc(#{map-get($titlelevels, $titlelevel)} + 50%);
     }
   }
+}
+
+
+
+// Align
+@mixin align-left{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+}
+@mixin align-left-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+}
+@mixin align-left-center{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+}
+@mixin align-left-bottom{
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-start;
+}
+@mixin align-center{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+@mixin align-center--baseline{
+    display:flex;
+    align-items:baseline;
+    justify-content:center;
+}
+@mixin align-center-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+}
+@mixin align-center-bottom{
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+
+@mixin align-right{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+}
+@mixin align-right-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+}
+@mixin align-right-bottom{
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-end;
 }
 
 

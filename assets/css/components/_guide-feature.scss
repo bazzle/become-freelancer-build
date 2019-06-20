@@ -2,8 +2,12 @@
     background-color:$color-feint;
     padding:$text-gap-tight;
     @include text-tiny;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;      
     &__inner{
-        @include grid(2, $text-gap-tight, small);
+        @include break(small) {
+            @include grid(2, $text-gap-tight); 
+        }
     }
     &__title{
         margin-bottom:$text-gap-tight;
@@ -22,9 +26,10 @@
 
 .guide-feature-panel{
     background-color:$white;
-    padding:$text-gap-deep 0;
     &__inner{
-        @include grid(2, $text-gap, small);
+        @include break(small) {
+            @include grid(2, $text-gap-tight); 
+        }
     }
     &__title{
         margin-bottom:$text-gap;

@@ -1,0 +1,70 @@
+<section class="hero-pillar">
+
+  <div class="panel hero-pillar__title-intro">
+    <div class="panel__container">
+      <div class="hero-pillar__title-intro__inner">
+        
+        <h1 class="hero-pillar__title">
+          {{ page.title }}
+        </h1>
+
+        {% unless page.id == 'home' %}
+        <div class="hero-pillar__post-meta post-meta">
+          {% include meta.html author=page.author last_updated=page.last_updated %}
+        </div>
+        {% endunless %}
+
+        <div class="hero-pillar__intro">
+          <p>
+            {{ page.intro }}
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="panel hero-pillar__bg">
+      <div class="panel__container">
+        <div class="hero-pillar__inner">
+
+          <div class="hero-pillar__contents-image contents-image">
+            <div class="contents-image__inner">
+              <div class="contents-image__contents">
+                <h3 class="contents-image__contents__title">On this page</h3>
+                <ul class="contents-image__contents__list">
+                  {% for section in sorted_sections %}
+                  <li><a href="#{{ section.slug }}">{{ section.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+              <div class="contents-image__image">
+                <img
+                  src="{{ site.url }}/assets/images/{{ page.hero_image }}"
+                  alt="{{ page.hero_image_alt }}"
+                />
+              </div>
+            </div>
+          </div>
+          
+        </div>
+    </div>
+  </div>
+
+
+  <svg class="hero-pillar__arrow-icon">
+    <use xlink:href="{{site.url}}/assets/svg/icons.svg#icon-arrow-down--section" />
+  </svg>
+
+    <!--
+      <div class="hero-pillar__cta">
+        <div class="container">
+          <a class="button" href="#">Download PDF</a>
+          <a class="button" href="#">Download Audio transcript</a>
+        </div> 
+      </div>
+    -->
+
+</section>

@@ -1,0 +1,25 @@
+<div class="page-nav hidden">
+  <div class="container page-nav__inner">
+    <div class="page-nav__dropdown__outer page-nav-trigger" role="button">
+      <div role="button" class="page-nav__button">
+        On this page
+        <svg class="page-nav__button__icon">
+          <use xlink:href="assets/svg/icons.svg#icon-arrow-down--thick" />
+        </svg>
+      </div>
+      <div class="page-nav__dropdown hidden">
+        <ul class="contents-image__contents__list">
+          {% for section in sorted_sections %}
+            <li><a href="#{{ section.slug }}">{{ section.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <a href="#" class="page-nav__backtop" role="button">
+        Back to top
+        <svg class="page-nav__backtop__icon">
+          <use xlink:href="assets/svg/icons.svg#icon-arrow-down--thick" />
+        </svg>
+    </a>
+  </div>
+</div>

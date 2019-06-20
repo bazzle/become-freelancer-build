@@ -1,0 +1,50 @@
+.pillar-section{
+  background-color:$color-feint;
+  &:nth-of-type(even){
+    background-color:$white;
+  }
+  &__head{
+    background-color:$color-feint-3;
+  }
+  &__title{
+    padding-top:$text-gap;
+    padding-bottom:$text-gap;
+    @include title-display(s3);
+    margin-bottom:0;
+    @include break(small) {
+      @include title-display(s2);
+      margin-bottom:0;
+      padding-top:$text-gap-deep;
+      padding-bottom:$text-gap-deep;
+    }
+  }
+  &__main{
+    &__inner{
+      padding-top:$text-gap;
+      padding-bottom:$text-gap;
+      @include break(small) {
+        padding-top:$text-gap;
+        padding-bottom:$text-gap;
+      }
+    }
+  }  
+  &__content{
+    @extend %text-gap;
+  }
+  &__links{
+    &__title{
+      @include title(s2);
+      @extend %text-gap;
+    }
+    &__list{
+      li{
+      }
+    }
+  }
+}
+
+
+
+
+
+

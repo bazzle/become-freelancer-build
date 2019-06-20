@@ -3,7 +3,7 @@
     align-items:center;
     font-size:$tiny;
     &__item{
-        color:$white;
+        color:$black;
         display:block;
         padding:0 1em;
         &:first-of-type{
@@ -14,6 +14,16 @@
         transform:rotate(-90deg);
         width:10px;
         height:10px;
-        color:$white;
+        color:$color-secondary;
+    }
+    &--reverse{
+        .breadcrumb{
+            &__item{
+                color:$white;
+            }
+            &__arrow{
+                color:$white;
+            }
+        }
     }
 }

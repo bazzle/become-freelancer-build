@@ -1,28 +1,30 @@
 // Project specific mixins and variables
 
 // paths
-$path-images: "../assets/images";
+$path-images: "../images";
 
 // layout ==============================================
 
 $site-width:1600px;
 $padding-sides:5vw;
-
-// standard margin
-
+$content-width:1000px;
 $margin-std:1.5rem;
 
 // colors ==============================================
 
 $color-primary:#0982C3;
-$color-primary-feint:lighten($color-primary, 40);
-$color-secondary:#62319C;
-$color-secondary-feint:lighten($color-secondary, 50);
-$color-accent:gold;
+$color-primary-feint:lighten($color-primary, 30);
+$color-secondary:#21c4d3;
+$color-secondary-feint:lighten($color-secondary, 30);
+$color-accent:#C4F9FF;
 $color-feint:#f2f2f2;
+$color-feint-1:#f2f2f2;
+$color-feint-2:#EBEBEB;
+$color-feint-3:#E3E3E3;
+$color-feint-4:#D4D4D4;
 
 // backgrounds
-$color-hero-bg:$color-primary;
+$color-header-bg:$white;
 
 // link color
 $color-link:$color-secondary;
@@ -33,10 +35,11 @@ $color-button:$color-secondary;
 
 // Headings
 $color-heading:$color-primary;
-$color-body-heading:$color-secondary;
+$color-body-heading:$color-primary;
 
-// taglines
+// misc
 $color-tagline:$black;
+$color-selection:$color-accent;
 
 // font loading
 @import url('https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap');
@@ -47,6 +50,8 @@ $color-tagline:$black;
 $font-brand:'Muli', sans-serif;
 $font-std:'Lato', sans-serif;
 $font-display:'Muli', sans-serif;
+$font-headings:'Muli', sans-serif;
+$font-standout:'Muli', sans-serif;
 
 // font-size;
 $font-size-base:62.5%;
@@ -56,6 +61,7 @@ $font-size-std:1.8rem;
 // font weights
 $thin:300;
 $std:400;
+$std-bold:700;
 $bold:800;
 $extrabold:900;
 
@@ -68,97 +74,27 @@ $line-height--tight:1;
 
 // text margins
 $text-gap:4rem;
-$text-gap-mobile:2rem;
-$text-gap-deep:6rem;
 $text-gap-tight:2rem;
+$text-gap-deep:12rem;
+$text-gap-mobile:2rem;
 
-// title sizes 
+// heading sizes 
 $titlelevels: (
-  s1:6rem,
-  s2:3rem,
-  s3:2rem,
+  s1:8rem,
+  s2:6rem,
+  s3:3rem,
+  s4:2rem,
 );
 
-// underline
-@mixin text-underline($color){
-    text-decoration: underline;
-    text-decoration-skip-ink: auto;
-    text-decoration-color: $color;
-}
+// display heading sizes 
+$titlelevels--d: (
+  s0:12rem,
+  s1:8rem,
+  s2:6rem,
+  s3:4rem,
+);
 
-// title display
-@mixin title-display($color:$color-heading){
-    font-size:4rem;
-    font-weight:$extrabold;
-    color:$color;
-    @include break(small) {
-      font-size:6rem;
-    }
-    @include break(medium) {
-      font-size:8rem;
-    }
-}
 
-@mixin text-leadin($font-size){
-  font-family:$font-display;
-  font-weight:$std;
-  font-size:$font-size;
-  line-height: 1.4;
-  p{
-    line-height: 1.4;
-  }
-}
-
-@mixin text-tiny{
-  font-size:$tiny;
-}
-
-// text body
-%text-body{
-  font-family:$font-std;
-  line-height:$line-height;
-  strong{
-    font-weight:$bold;
-  }
-  h1, h2, h3, h4, h5{
-    color:$color-primary;
-    padding:0;
-    margin:0;
-    margin-bottom:$text-gap;
-    font-weight:$bold;
-  }
-  h2{
-    @include title(s2);
-  }
-  h3{
-    @include title(s3);
-  }
-  p, ol, ul{
-    padding:0;
-    margin:0;
-    margin-bottom:$text-gap;
-  }
-  ul{
-    box-sizing:border-box;
-  }
-  li{
-    width:calc(100% - 1em);
-    list-style:none;
-    position:relative;
-    padding-left:1.5em;
-    &:before{
-      content:'\25A0';
-      color:$color-secondary;
-      position:absolute;
-      left:0;
-      top:0;
-    }
-  }
-  & > *:last-child{
-    margin-bottom:0;
-    padding-bottom:0;
-  }
-}
 
 // header ==============================================
 
@@ -168,34 +104,20 @@ $header-height-mobile:80px;
 // misc styles =========================================
 
 // text shadow
-$text-shadow-std: 1px 1px 2px $black;
+$text-shadow: 0 2px 3px rgba($black, .3);
+$text-shadow-feint: 0 1px 2px rgba($black, .3);
 
 // raised item shadow
-$shadow:3px 3px 3px rgba(93, 93, 93, 0.1);
+$box-shadow:0px 3px 12px rgba($black, .1);
 
 // borders
-
 $border-feint: rgba($black, 0.2) solid 1px;
 $border-accent: $color-secondary solid 2px;
 $border-accent-feint: rgba($color-secondary, 0.2) solid 1px;
 
+// border radius
+$border-radius: 2px;
 
-// html ================================================
-
-html {
-  font-family: $font-std;
-  font-size:$font-size-base;
-}
-
-// body
-body {
-  font-size:$font-size-mobile;
-  @include break(small) {
-    font-size:$font-size-std;
-  }
-  line-height:$line-height;
-  color:$black;
-}
 
 
 
