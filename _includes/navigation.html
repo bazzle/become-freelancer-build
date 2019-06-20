@@ -1,5 +1,27 @@
-<nav>
-  {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+{% if include.homelink %}
+  <div class="nav__item">
+    <a href="{{ site.url }}" {% if page.url == item.link %}class="current"{% endif %}>
+      Home
+    </a>
+  </div>
+{% endif %}
+
+{% if include.guides %}
+  {% for item in site.data.nav-guides %}
+    <div class="nav__item">
+      <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
+        {{ item.name }}
+      </a>
+    </div>
   {% endfor %}
-</nav>
+  {% endif %}
+
+{% if include.main %}
+{% for item in site.data.nav-main %}
+    <div class="nav__item">
+      <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
+        {{ item.name }}
+      </a>
+    </div>
+  {% endfor %}
+  {% endif %}

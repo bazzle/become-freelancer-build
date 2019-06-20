@@ -31,7 +31,7 @@ $color-link:$color-secondary;
 $color-text:$black;
 
 // button colour
-$color-button:$color-secondary;
+$color-button:$color-primary;
 
 // Headings
 $color-heading:$color-primary;
@@ -92,9 +92,8 @@ $titlelevels--d: (
   s1:8rem,
   s2:6rem,
   s3:4rem,
+  s4:3rem,
 );
-
-
 
 // header ==============================================
 
@@ -116,14 +115,5 @@ $border-accent: $color-secondary solid 2px;
 $border-accent-feint: rgba($color-secondary, 0.2) solid 1px;
 
 // border radius
-$border-radius: 2px;
-
-
-
-
-
-
-
-
-
+$border-radius: 4px;
 

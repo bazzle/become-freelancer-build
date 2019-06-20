@@ -1,0 +1,60 @@
+// hero on post index page
+.hero-index{
+  $color-text:$white;
+  $color-bg:$color-primary;
+  background-color:$color-bg;
+  position:relative;
+  height:100%;
+  color:$color-text;
+  border-bottom:20px solid $color-bg;
+  &__inner{
+    padding-top:$text-gap;
+    padding-bottom:$text-gap;
+    @include break(medium) {
+      padding-top:$text-gap-deep;
+      padding-bottom:$text-gap;
+    }
+  }
+  &__title{
+    padding-bottom:$text-gap-mobile;
+    @include title-display(s3, $color-text);
+    @include break(small) {
+      @include title-display(s2, $color-text);
+      padding-bottom:$text-gap;
+    }
+  }
+  &__post-meta{
+    color:$color-text;
+    padding-bottom:$text-gap-mobile;
+    @include break(small) {
+      padding-bottom:$text-gap;
+    }
+  }
+  &__intro{
+    color:$color-text;
+    width:100%;
+    max-width:$content-width;
+    p{
+      @include text-leadin(2rem);
+      @include break(small) {
+        @include text-leadin;  
+      }
+    }
+  }
+  &__arrow-icon{
+    position:absolute;
+    bottom:-45px;
+    left:50%;
+    transform:translate(-25px);
+    display:block;
+    width:50px;
+    height:25px;
+    color:$color-bg;
+    z-index:1;
+  }
+  &__cta{
+    .button{
+      margin-bottom:$text-gap-tight;
+    }
+  }
+}

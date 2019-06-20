@@ -9,4 +9,8 @@ hero_image_alt: Devices running browsersync
 intro: So if you've decided to become a web designer, where do you start? Good question. This resource could be your starting point. What is web design? it sounds obvious, but actually there is a lot of ambiguity. You could say web design is a general term that encompasses everything from UX design to front-end development. We go over that in the first section. Grab your favourite hot drink, croissant or perhaps pain au chocolat and read on.
 ---
 
-{% assign sorted_sections = site.become_writer | sort:"date" | reverse %}
+{% assign sorted_sections = site.become_web_designer | sort:"date" | reverse %}
+
+{% include hero-pillar.html %}
+
+{% include pillar-sections.html %}

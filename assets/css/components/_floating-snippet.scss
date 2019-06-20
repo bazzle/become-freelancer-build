@@ -1,16 +1,20 @@
 .floating-snippet{
   background-color:$white;
   position:relative;
-  margin-bottom:$text-gap-mobile;
   width:100%;
   border-radius: $border-radius;
   box-shadow: $box-shadow;
   background-color:$white;
-  padding:$text-gap-mobile;
   z-index:1;
+  padding:$text-gap-mobile;
   @include break(medium) {
     padding:$text-gap;
-    margin-bottom:0;
+  }
+  &--tight{
+    padding:$text-gap-mobile;
+    @include break(medium) {
+      padding:$text-gap-tight;
+    }
   }
   p{
     margin-bottom:0;

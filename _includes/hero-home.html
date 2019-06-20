@@ -1,18 +1,20 @@
 <div class="hero-home">
 
-  <div class="panel hero-home__main" style="background-image: url({{site.url}}/assets/images/{{page.hero_image_home}})">
-    <div class="panel__container">
-      <div class="hero-home__main__inner">
+  <div class="hero-home__main" style="background-image: url({{site.url}}/assets/images/{{page.hero_image_home}})">
+    <div class="panel">
+      <div class="panel__container">
+        <div class="hero-home__main__inner">
 
-        <h1 class="hero-home__title">
-          {{ site.title }}
-        </h1>
+          <h1 class="hero-home__title">
+            {{ site.title }}
+          </h1>
 
+        </div>
       </div>
+      <svg class="icon hero-home__arrow-down">
+        <use xlink:href="assets/svg/icons.svg#icon-hand-point-down" />
+      </svg>
     </div>
-    <svg class="icon hero-home__arrow-down">
-      <use xlink:href="assets/svg/icons.svg#icon-hand-point-down" />
-    </svg>
   </div>
 
   <div class="panel hero-home__bottom">

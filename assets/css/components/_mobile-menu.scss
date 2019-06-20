@@ -1,6 +1,9 @@
 .mobile-menu{
   $bgcolor:$color-primary;
   display:block;
+  @include break(large) {
+    display:none;
+  }
   background-color:$white;
   color:$white;
   a{
@@ -44,8 +47,5 @@
     padding:2rem;
     border-top:1px solid rgba($white, .3);
     border-bottom:1px solid rgba($black, .3);
-  }
-  @include break(medium) {
-    display:none;
   }
 }

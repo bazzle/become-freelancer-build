@@ -69,6 +69,13 @@ $black-lighten:lighten($black, 20);
 $line: 1px solid $black;
 $line-feint:1px solid $black-lighten;
 
+// Aspect ratios
+$aspect_1-1: 100%;
+$aspect_16-9: 56.25%;
+$aspect_4-3: 75%;
+$aspect_3-2: 66.66%;
+$aspect_8-5: 62.5%;
+
 // title
 @mixin title($titlelevel){
   font-weight:$bold;

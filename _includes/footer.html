@@ -5,19 +5,15 @@
         <div class="footer__row">
           <div class="footer__links">
             <span class="footer__links__title">Pages</span>
-            {% for item in site.data.nav-main %}
-              <a href="{{ item.link }}">
-                {{ item.name }}
-              </a>
-            {% endfor %}
+            <nav class="nav">
+              {% include navigation.html homelink=true main=true %}
+            </nav>
           </div>
           <div class="footer__links">
             <span class="footer__links__title">Guides</span>
-            {% for item in site.data.nav-guides %}
-              <a href="{{ item.link }}">
-                {{ item.name }}
-              </a>
-            {% endfor %}
+            <nav class="nav">
+              {% include navigation.html guides=true %}
+            </nav>
           </div>
         </div>
         <div class="footer__row">

@@ -1,9 +1,4 @@
-.guide-feature-horiz{
-    background-color:$color-feint;
-    padding:$text-gap-tight;
-    @include text-tiny;
-    border-radius: $border-radius;
-    box-shadow: $box-shadow;      
+.guide-feature-small{
     &__inner{
         @include break(small) {
             @include grid(2, $text-gap-tight); 
@@ -16,7 +11,8 @@
             margin-bottom:$text-gap-tight;
         }
         &__title{
-            font-weight:$bold;
+            display:block;
+            @include title(s4);
         }
     }
 }
@@ -24,22 +20,24 @@
 
 
 
-.guide-feature-panel{
-    background-color:$white;
-    &__inner{
-        @include break(small) {
-            @include grid(2, $text-gap-tight); 
-        }
+.guide-feature-large{
+    $color-from:$color-primary;
+    $color-to:$color-secondary;
+    background-image: linear-gradient($color-from, $color-to);
+    padding-top:$text-gap-mobile;
+    padding-bottom:$text-gap-mobile;
+    @include break(medium) {
+      padding-top:$text-gap;
+      padding-bottom:$text-gap;
     }
     &__title{
-        margin-bottom:$text-gap;
+        @extend %text-gap;
         &__tagline{
             @extend %tagline;
             margin-bottom:$text-gap-tight;
         }
         &__title{
-            font-weight:$bold;
-            @include title(s2);
+            @include title-display(s3);
         }
     }
     &__intro{

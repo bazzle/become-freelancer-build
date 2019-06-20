@@ -4,6 +4,7 @@
     width:100%;
     z-index:10;
     display:flex;
+    border-bottom:$color-accent 1px solid;
     @include align(center, center);
     &__inner{
         width:100%;
@@ -32,7 +33,7 @@
         display:flex;
         flex-direction:column;
         align-items:flex-end;
-        @include break(medium) {
+        @include break(large) {
           display:none;
         }
         &__icon{
@@ -45,15 +46,17 @@
     }
     &__menu{
         display:none;
-        @include break(medium) {
+        @include break(large) {
             display:flex;
             align-items:center;
             margin-left:auto;
         }
-        &__item{
-            margin-left:2em;
-            a{
-                @include link-styled;
+        .nav{
+            &__item{
+                margin-left:2em;
+                a{
+                    @include link-styled;
+                }
             }
         }
     }

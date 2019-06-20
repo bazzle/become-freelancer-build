@@ -1,19 +1,17 @@
-// hero on post page
-
-.hero-post{
-  $color-from:$color-primary;
-  $color-to:$color-secondary;
+// hero on pillar page
+.hero-page{
   $color-text:$white;
-  background-color:$color-from;
+  $color-bg:$color-primary;
+  background-color:$color-primary;
   position:relative;
   height:100%;
   min-height:calc(100vh - #{$header-height});
-  color:$color-primary;
-  border-bottom:20px solid $color-to;
+  color:$color-text;
+  border-bottom:20px solid $color-bg;
   @include break(medium) {
     min-height:0;
   }
-  &__title-intro{
+  &__inner{
     padding-top:$text-gap;
     padding-bottom:$text-gap;
     @include break(medium) {
@@ -47,31 +45,6 @@
       }
     }
   }
-  &__breadcrumb{
-    margin-top:0;
-    margin-bottom:$text-gap-mobile;
-    @include break(small) {
-      margin-top:0;
-      margin-bottom:$text-gap-tight;
-    }
-  }
-  &__bg{
-    background-image: linear-gradient($color-from, $color-to);
-    padding-bottom:$text-gap;
-    @include break(medium) {
-      padding-bottom:$text-gap-deep;
-    }
-  }
-  &__image{
-    margin-bottom:$text-gap-mobile;
-    @include break(small) {
-        margin-bottom:0;
-    }
-    img{
-      width:100%;
-      height:auto;
-    }
-  }
   &__arrow-icon{
     position:absolute;
     bottom:-45px;
@@ -80,6 +53,11 @@
     display:block;
     width:50px;
     height:25px;
-    color:$color-to;
+    color:$color-bg;
+  }
+  &__cta{
+    .button{
+      margin-bottom:$text-gap-tight;
+    }
   }
 }

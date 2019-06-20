@@ -3,7 +3,7 @@ layout: post
 author: Barry
 permalink: setup-browsersync
 title: Setup Browsersync
-hero_image: browsersync.gif
+hero_image: web-design.jpg
 hero_image_alt: Devices running browsersync
 guide_image: web-design-thumb.jpg
 guide_title: How to become a Web Designer

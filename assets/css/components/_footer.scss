@@ -18,8 +18,12 @@
   &__links{
     display:flex;
     flex-direction:column;
-    a{
-      color:$white;
+    .nav{
+      &__item{
+        a{
+          @include link-styled($white, $color-primary);
+        }
+      }
     }
     @extend %text-gap;
     &__title{

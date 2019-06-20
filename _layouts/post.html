@@ -2,66 +2,17 @@
 layout: default
 ---
 
+{% include progress-indicator.html %}
 {% assign content_array = page.content | split: site.excerpt_separator %}
-{% assign excerpt_only = content_array | first %}
-{% assign content_remainder = content_array | last %}
-
-
 {% assign parentpage = site.pages | where: "slug", "become_web" %}
-
-  {{ parentpage.permalink }}
-
+{{ parentpage.permalink }}
 
 <article class="article">
 
-{% include progress-indicator.html %}
-
-
 {% include hero-post.html %}
 
-  <div class="article__content">
-    <div class="panel">
-      <div class="panel__container">
-        <div class="panel__inner">
-          <div class="post-content__section__content body-content">
-            {{ content_remainder | remove_first: '</p>'}}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+{% include post-content.html %}
 
-
-
-
-
-  <div class="guide-feature-panel">
-    <div class="panel">
-    <div class="panel__container">
-    <div class="guide-feature-panel__inner panel__inner">
-      <div class="guide-feature-panel__image">
-        <a href="pillar.html">
-          <img src="assets/images/web-design-thumb.jpg" class="guide-feature-panel__image" />
-        </a>
-      </div>
-      <div class="guide-feature-panel__content">
-        <h4 class="guide-feature-panel__title">
-          <span class="guide-feature-panel__title__tagline">From the guide:</span>
-          <a href="pillar.html" class="guide-feature-panel__title__title">How to become a web designer</a>
-        </h4>
-        <div class="guide-feature-panel__intro">
-          <p>
-            Short into about the page. Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio. Short into about the page. Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio. doloribus asperiores repellat. At vero eos et accusamus et iusto odio
-          </p>
-        </div>
-        <a href="pillar.html" class="button">Go to guide</a>
-      </div>
-    </div>
-    </div>
-  </div>
-</div>
-
-
-
+{% include guide-feature-large.html %}
 
 </article>

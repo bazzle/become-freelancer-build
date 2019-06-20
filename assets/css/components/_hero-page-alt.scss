@@ -1,15 +1,14 @@
-// hero on post page
+// hero on pillar page
 
-.hero-post{
-  $color-from:$color-primary;
-  $color-to:$color-secondary;
-  $color-text:$white;
-  background-color:$color-from;
+.hero-page{
+  $color-text:$color-primary;
+  $color-bg:$color-feint;
+  background-color:$color-bg;
   position:relative;
   height:100%;
   min-height:calc(100vh - #{$header-height});
-  color:$color-primary;
-  border-bottom:20px solid $color-to;
+  color:$color-text;
+  border-bottom:20px solid $color-bg;
   @include break(medium) {
     min-height:0;
   }
@@ -19,6 +18,18 @@
     @include break(medium) {
       padding-top:$text-gap-deep;
       padding-bottom:$text-gap-deep;
+    }
+  }
+  &__inner{
+  }
+  &__breadcrumb{
+    color:$color-text;
+    a{
+      color:$color-text;
+    }
+    margin-bottom:$text-gap-mobile;
+    @include break(small) {
+      margin-bottom:$text-gap;
     }
   }
   &__title{
@@ -48,28 +59,16 @@
     }
   }
   &__breadcrumb{
-    margin-top:0;
     margin-bottom:$text-gap-mobile;
     @include break(small) {
-      margin-top:0;
       margin-bottom:$text-gap-tight;
     }
   }
-  &__bg{
-    background-image: linear-gradient($color-from, $color-to);
-    padding-bottom:$text-gap;
-    @include break(medium) {
-      padding-bottom:$text-gap-deep;
-    }
-  }
-  &__image{
+  &__contents-image{
     margin-bottom:$text-gap-mobile;
     @include break(small) {
-        margin-bottom:0;
-    }
-    img{
-      width:100%;
-      height:auto;
+      margin-bottom:0;
+      //max-width:$content-width;
     }
   }
   &__arrow-icon{
@@ -80,6 +79,11 @@
     display:block;
     width:50px;
     height:25px;
-    color:$color-to;
+    color:$color-bg;
+  }
+  &__cta{
+    .button{
+      margin-bottom:$text-gap-tight;
+    }
   }
 }
