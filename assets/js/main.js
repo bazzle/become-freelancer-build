@@ -58,4 +58,3 @@ window.onscroll = () => {
     pagenavshow(contentoffset);
   }
 }
-
