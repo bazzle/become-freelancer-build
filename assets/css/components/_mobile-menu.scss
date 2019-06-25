@@ -1,14 +1,10 @@
 .mobile-menu{
-  $bgcolor:$color-primary;
+  $bgcolor:$color-feint-1;
   display:block;
   @include break(large) {
     display:none;
   }
-  background-color:$white;
-  color:$white;
-  a{
-    color:$white;
-  }
+  background-color:$bgcolor;
   height:auto;
   width:100%;
   position:absolute;
@@ -29,23 +25,26 @@
     transform:translateX(100%);
     opacity:0;
   }
-  &__group{
-    &:last-of-type{
-      .mobile-menu__item{
-        background-color:darken($bgcolor, 5);
-      }
+  &__inner{
+    padding-top:$text-gap-mobile;
+    @include break(small) {
+      padding-top:$text-gap;
     }
+  }
+  &__group{
     &__title{
       font-size:$tiny;
       text-transform:uppercase;
-      padding:2rem;
     }
   }
-  &__item{
-    background-color:$bgcolor;
-    display:block;
-    padding:2rem;
-    border-top:1px solid rgba($white, .3);
-    border-bottom:1px solid rgba($black, .3);
+  .nav{
+    &__item{
+      background-color:$bgcolor;
+      display:block;
+      @extend %text-gap-tight;
+      span{
+        @include link-styled($color-primary);
+      }
+    }
   }
 }

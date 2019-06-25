@@ -3,7 +3,8 @@
   color:$white;
   &__row{
     width:100%;
-    padding-top:$text-gap-mobile;
+    padding-top:$text-gap-mobile*2;
+    padding-bottom:$text-gap-mobile;
     @include break(small) {
       @include grid(2-3);
       padding-top:$text-gap;

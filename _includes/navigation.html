@@ -1,7 +1,9 @@
 {% if include.homelink %}
   <div class="nav__item">
     <a href="{{ site.url }}" {% if page.url == item.link %}class="current"{% endif %}>
-      Home
+      <span>
+        Home
+      </span>
     </a>
   </div>
 {% endif %}
@@ -10,7 +12,9 @@
   {% for item in site.data.nav-guides %}
     <div class="nav__item">
       <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
-        {{ item.name }}
+        <span>
+          {{ item.name }}
+        </span>
       </a>
     </div>
   {% endfor %}
@@ -20,7 +24,9 @@
 {% for item in site.data.nav-main %}
     <div class="nav__item">
       <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
-        {{ item.name }}
+        <span>
+          {{ item.name }}
+        </span>
       </a>
     </div>
   {% endfor %}
