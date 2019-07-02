@@ -1,7 +1,7 @@
 <header class="header">
   <div class="container">
   <div class="header__inner">
-      <a href="/" class="header__logo-lockup">
+      <a href="{{site.url}}/" class="header__logo-lockup">
         {% if site.image-path %}
           <img class="header__logo-lockup__image" src="{{ site.image-path }}" alt="{{ site.image-alt }}">
         {% endif %}
@@ -14,7 +14,7 @@
 
       <a href="#" class="header__trigger trigger-menu" role="button">
           <svg class="icon header__trigger__icon">
-            <use xlink:href="assets/svg/icons.svg#icon-menu" />
+            <use xlink:href="{{site.url}}/assets/svg/icons.svg#icon-menu" />
           </svg>
           <span class="header__trigger__label">Menu</span>
       </a>

@@ -1,0 +1,81 @@
+// back to top button
+.backtop {
+    $color_text: $color-primary;
+    $color_bg: $white;
+    $color_bg_darken: darken($color_bg, 3);
+    border-radius: $border-radius $border-radius 0 0;
+    text-align: center;
+    position: sticky;
+    width: 100vw;
+    padding-left:5vw;
+    padding-right:5vw;
+    bottom:-1px;
+    left: 0;
+    cursor: pointer;
+    color: $color-text;
+    @include align-right;
+    @include transitions(0.2s, linear, background-color, opacity, top);
+    &__inner{
+        height:100%;
+        position:relative;
+        @keyframes fadeout{
+            from{
+                opacity:1;
+            }
+            to{
+                opacity:0;
+            }
+        }
+        @keyframes fadein{
+            from{
+                opacity:0;
+            }
+            to{
+                opacity:1;
+            }
+        }
+        &.fadeout{
+            animation: fadeout .5s;
+            animation-fill-mode:forwards;
+        }
+        &.fadein{
+            animation: fadein .5s;
+            animation-fill-mode:forwards;
+        }
+        padding:1em 1.7em;
+        @include align-center;
+        background-color:$white;
+        border-radius: $border-radius;
+        &:hover {
+        background-color: $color_bg;
+            .backtop__icon {
+                @keyframes pulse {
+                    0% {
+                        fill: $color-primary;
+                    }
+                    20% {
+                        fill: #ff4e2e;
+                    }
+                    80% {
+                        fill: #86e254;
+                    }
+                    100% {
+                        fill: $color-primary;
+                    }
+                }
+                animation: pulse 3s infinite;
+            }
+        }
+    }
+    &__icon {
+        transform: rotate(180deg);
+        color: $color-text;
+        width: 30px;
+        height: 30px;
+    }
+    span {
+        @include link-styled;
+        display:inline-block;
+        margin-left:1em;
+    }
+}

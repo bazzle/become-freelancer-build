@@ -7,29 +7,23 @@
     background-color:$white;
     display:block;
     @include transition(opacity);
-    &.hidden{
-        visibility:hidden;
-        opacity:0;
-    }
-    &.visible{
-        visibility:visible;
-        opacity:1;
-    }
+    z-index:10;
     &__inner{
         height:$heightmobile;
         @include break(small) {
             height:$height;
         }
-        display:flex;
-        justify-content: flex-start;
-        align-items:center;
-        position:relative;
+        overflow:visible;
     }
-    &__button{
+    &__label{
         cursor:pointer;
-        height:100%;
         width:auto;
-        @include align-center;
+        @include align-left;
+        padding-left:5vw;
+        height:$heightmobile;
+        @include break(small) {
+            height:$height;
+        }
         &__icon{
             color:$black;
             width:10px;
@@ -38,41 +32,14 @@
         }
     }
     &__dropdown{
-        position:absolute;
-        top:$heightmobile;
-        left:0;
-        width:100%;
-        @include break(small) {
-          top:$height;
-        }
-        background-color:$white;
-        padding:3rem;
-        padding:$padding-sides;
-        @include transition(opacity);
-        &__outer{
-
-        }
-        &.hidden{
-            visibility:hidden;
-            opacity:0;
-        }
-        &.visible{
-            visibility:visible;
-            opacity:1;
-        }
-    }
-    &__backtop{
-        cursor:pointer;
-        height:100%;
-        width:auto;
-        @include align-center;
-        margin-left:auto;
-        &__icon{
-            transform:rotate(180deg);
-            color:$black;
-            width:10px;
-            height:10px;
-            margin:1rem;
+        position:relative;
+        &__dropdown{
+            position:relative;
+            left:0;
+            width:100vw;
+            background-color:$white;
+            padding:$text-gap-tight $padding-sides;
+            @include transition(opacity);
         }
     }
 }

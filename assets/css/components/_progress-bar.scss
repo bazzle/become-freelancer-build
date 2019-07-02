@@ -2,15 +2,24 @@
     background-color:$color-feint;
     position:fixed;
     left:0;
-    width:100%;
+    width:100vw;
     height:5px;
     top:$header-height;
     z-index:100;
+    @include transition(opacity);
+    &.hidden{
+      visibility:hidden;
+      opacity:0;
+    }
+    &.visible{
+      visibility:visible;
+      opacity:1;
+    }
 }
 
 /* The progress container (grey background) */
 .progress-container {
-  width: 100%;
+  width: 100vw;
   height: 5px;
 }
 

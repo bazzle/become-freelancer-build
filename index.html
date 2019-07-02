@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: homepage
 title: So, where do I start
 author: Rob and Barry
 id: home
@@ -9,17 +9,3 @@ hero_image: home-hero4.jpg
 hero_image_alt: Devices running browsersync
 intro: You may be stuck in a boring uninspiring job. You may be yearning for more time to yourself. You may be at a stage in your career you feel you deserve a higher rate of pay but you don’t want to get on your hands and knees for it. Maybe it’s time you consider working freelance. Freelance is freedom. It’s time you embrace it.
 ---
-
-{% assign sorted_sections = site.become_writer | sort:"date" | reverse %}
-
-{% include progress-indicator.html %}
-
-{% include page-nav.html %}
-
-{% include hero-home.html %}
-
-{% include home-about.html %}
-
-{% include hero-pillar.html %}
-
-{% include pillar-sections.html %}

@@ -11,7 +11,7 @@
 {% if include.guides %}
   {% for item in site.data.nav-guides %}
     <div class="nav__item">
-      <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
+      <a href="{{ site.url }}/{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
         <span>
           {{ item.name }}
         </span>
@@ -23,7 +23,7 @@
 {% if include.main %}
 {% for item in site.data.nav-main %}
     <div class="nav__item">
-      <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
+      <a href="{{ site.url }}/{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
         <span>
           {{ item.name }}
         </span>

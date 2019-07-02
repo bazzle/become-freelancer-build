@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+{% assign sorted_sections = site.become_freelancer | sort:"date" | reverse %}
+
+{% include progress-indicator.html %}
+
+{% include page-nav.html %}
+
+{% include hero-home.html %}
+
+{% include home-about.html %}
+
+{% include hero-pillar.html %}
+
+{% include pillar-sections.html %}

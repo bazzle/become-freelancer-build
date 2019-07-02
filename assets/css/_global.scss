@@ -50,9 +50,21 @@ $move-snap-out: cubic-bezier(0.2, 0.9, 0.3, 1.3);
   transition-timing-function: $anim;
 }
 
+// multiple arguments
+@mixin transitions($speed, $anim, $property... ){
+  transition-property: $property;
+  transition-duration: $speed;
+  transition-timing-function: $anim;
+}
+
 // anchor
 a{
   @include transition(color, .5s);
+}
+
+// scroll behaviour
+html{
+  scroll-behavior: smooth;
 }
 
 
@@ -122,6 +134,8 @@ a{
 
 @mixin text-tiny{
   font-size:$tiny;
+  font-weight:$bold;
+  line-height:1.4;
 }
 
 // text body
@@ -220,7 +234,7 @@ a{
   @include align-center-top;
 }
 
-// LAYOUT AND GRID ====================================================================================================
+
 
 @mixin container{
   width:calc(100vw - #{$padding-sides}*2);
@@ -379,6 +393,17 @@ a{
 
 // GLOBAL ELEMENTS AND CLASSES =====================================================================================
 
+// hidden/visible
+.hidden{
+  visibility:hidden;
+  opacity:0;
+  height:0;
+}
+.visible{
+  visibility:visible;
+  opacity:1;
+}
+
 p, ul, ol{
   padding:0;
   margin:0;
@@ -404,12 +429,15 @@ a{
 
 // syled links
 
-@mixin link-styled($color:$black, $border-color:$color-secondary ){
+@mixin link-styled($color:$black, $border-color:$color-secondary, $hover-color:$color-primary ){
   font-family:$font-standout;
   font-weight:$bold;
   color:$color;
   border-bottom:.1em solid $border-color;
   display:inline-block;
+  &:hover{
+    color:$hover-color;
+  }
 }
 
 // Double border

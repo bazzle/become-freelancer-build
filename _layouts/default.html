@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Description here">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/style.css">
     {% feed_meta %}
     {% seo %}
   </head>
@@ -19,7 +19,7 @@
 
     {% include footer.html %}
 
-    <script src="{{ site.url }}/assets/js/main.js"></script>
+    <script type="module" src="{{ site.url }}/assets/js/scripts.js"></script>
 
   </body>
 </html>

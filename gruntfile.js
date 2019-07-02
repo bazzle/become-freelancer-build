@@ -21,7 +21,7 @@ module.exports = function(grunt) {
             require("cssnano")(), // minify the result
           ]
         },
-        src: "assets/css/main.scss",
+        src: "_site/assets/css/style.css",
         dest: "_site/assets/css/style.css"
       }
     },

@@ -1,7 +1,8 @@
+url: https://br-web.io/baf
 livereload: false
 collections_dir: collections
 collections:
-  homepage:
+  become_freelancer:
     output: true
   become_web_designer:
     output: true

@@ -1,11 +1,5 @@
 // hero on homepage
 
-@keyframes pulse {
-  0%   { fill: #86E254 }
-  50%  { fill: #FF4E2E }
-  100% { fill: #86E254 }
-}
-
 .hero-home{
   position:relative;
   @include break(small) {
@@ -32,6 +26,11 @@
     }
   }
   &__arrow-down{
+    @keyframes pulse {
+      0%   { fill: #86E254 }
+      50%  { fill: #FF4E2E }
+      100% { fill: #86E254 }
+    }
     animation: pulse 3s infinite;
     width:30px;
     height:30px;

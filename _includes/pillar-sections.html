@@ -1,3 +1,4 @@
+<div class="pillar-content">
 {% for section in sorted_sections %}
 
     <section class="pillar-section" id="{{ section.slug }}">
@@ -36,3 +37,5 @@
     </section>
 
 {% endfor %}
+{% include back-top.html %}
+</div>
