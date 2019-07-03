@@ -1,8 +1,15 @@
 .guide-feature-small{
     &__inner{
         @include break(small) {
-            @include grid(2, $text-gap-tight); 
+            @include grid(2, $text-gap-tight);
         }
+    }
+    &__button{
+        padding-bottom:$text-gap-mobile;
+        @include break(small) {
+          padding-bottom:0;
+        }
+          
     }
     &__title{
         margin-bottom:$text-gap-tight;
@@ -31,7 +38,7 @@
       padding-bottom:$text-gap;
     }
     &__title{
-        @extend %text-gap;
+        @include text-gap;
         &__tagline{
             @extend %tagline;
             margin-bottom:$text-gap-tight;

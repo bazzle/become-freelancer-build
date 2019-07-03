@@ -41,7 +41,7 @@
     &__item{
       background-color:$bgcolor;
       display:block;
-      @extend %text-gap-tight;
+      @include text-gap-tight;
       span{
         @include link-styled($color-primary);
       }

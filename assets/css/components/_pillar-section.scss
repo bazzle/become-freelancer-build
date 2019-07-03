@@ -42,12 +42,12 @@
     }
   }  
   &__content{
-    @extend %text-gap;
+    @include text-gap
   }
   &__links{
     &__title{
       @include title(s3);
-      @extend %text-gap;
+      @include text-gap
     }
     &__list{
       li{

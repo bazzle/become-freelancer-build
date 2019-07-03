@@ -10,66 +10,84 @@
   min-height:calc(100vh - #{$header-height});
   color:$color-primary;
   border-bottom:20px solid $color-to;
+  padding-top:$text-gap;
+  padding-bottom:$text-gap;
+  background-image: linear-gradient($color-from, $color-to);
   @include break(medium) {
     min-height:0;
+    padding-top:$text-gap-deep;
+    padding-bottom:$text-gap-deep;
   }
   &__title-intro{
-    padding-top:$text-gap;
-    padding-bottom:$text-gap;
     @include break(medium) {
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content: flex-end;
       padding-top:$text-gap-deep;
-      padding-bottom:$text-gap-deep;
     }
   }
   &__title{
-    margin-bottom:$text-gap-mobile;
+    padding-bottom:$text-gap-mobile;
     @include title-display(s3, $color-text);
     @include break(small) {
-      @include title-display(s1, $color-text);
-      margin-bottom:$text-gap;
+      padding-bottom:$text-gap/2;
+      @include title-display(s2, $color-text);
+    }
+    @include break(medium) {
+      padding-bottom:$text-gap/2;
     }
   }
   &__post-meta{
     color:$color-text;
-    margin-bottom:$text-gap-mobile;
+    padding-bottom:$text-gap-mobile;
     @include break(small) {
-      margin-bottom:$text-gap;
+      padding-bottom:$text-gap;
     }
   }
   &__intro{
     color:$color-text;
-    width:100%;
+    width:100%; 
     max-width:$content-width;
+    padding-bottom:$text-gap-mobile;
+    @include break(small) {
+      padding-bottom:$text-gap;
+    }
     p{
-      @include text-leadin(2rem);
-      @include break(small) {
-        @include text-leadin;  
+      @include text-leadin(1.8rem);
+      @include break(medium) {
+        @include text-leadin(1.8rem);
       }
     }
   }
   &__breadcrumb{
     margin-top:0;
     margin-bottom:$text-gap-mobile;
-    @include break(small) {
+    @include break(medium) {
       margin-top:0;
       margin-bottom:$text-gap-tight;
     }
   }
-  &__bg{
-    background-image: linear-gradient($color-from, $color-to);
-    padding-bottom:$text-gap;
-    @include break(medium) {
-      padding-bottom:$text-gap-deep;
-    }
-  }
   &__image{
-    margin-bottom:$text-gap-mobile;
-    @include break(small) {
-        margin-bottom:0;
+    @include break(medium) {
+        margin-bottom:$text-gap;
+        height:100%;
     }
     img{
       width:100%;
       height:auto;
+      @include break(medium) {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &__feature{
+    max-width:500px;
+    padding-bottom:$text-gap-mobile;
+    @include break(medium) {
+      padding-bottom:0;
     }
   }
   &__arrow-icon{

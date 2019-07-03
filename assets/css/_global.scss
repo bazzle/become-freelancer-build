@@ -215,17 +215,17 @@ html{
 
 // LAYOUT AND GRID ====================================================================================================
 
-%text-gap{
-  margin-bottom:$text-gap-mobile;
+@mixin text-gap{
+  padding-bottom:$text-gap-mobile;
   @include break(small) {
-    margin-bottom:$text-gap;
+    padding-bottom:$text-gap;
   }
 }
 
-%text-gap-tight{
-  margin-bottom:$text-gap-mobile;
+@mixin text-gap-tight{
+  padding-bottom:$text-gap-mobile;
   @include break(small) {
-    margin-bottom:$text-gap-tight;
+    padding-bottom:$text-gap-tight;
   }
 }
 
@@ -335,6 +335,16 @@ html{
   &--2{
     @include break(small) {
       @include grid(2, 3rem);
+    }
+    &--medium{
+      @include break(medium) {
+        @include grid(2, 3rem);
+      }
+    }
+    &--large{
+      @include break(medium) {
+        @include grid(2, 3rem);
+      }
     }
   }
   &--3{

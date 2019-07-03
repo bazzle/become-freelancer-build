@@ -26,19 +26,19 @@
         }
       }
     }
-    @extend %text-gap;
+    @include text-gap;
     &__title{
       font-size:$tiny;
       text-transform:uppercase;
-      @extend %text-gap-tight;
+      @include text-gap-tight;
     }
   }
   &__notice{
-    @extend %text-gap;
+    @include text-gap;
   }
   &__social-media{
     color:$white;
-    @extend %text-gap;
+    @include text-gap;
     &__item{
       cursor:pointer;
       margin-left:1rem;

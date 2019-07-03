@@ -6,6 +6,7 @@ collections:
     output: true
   become_web_designer:
     output: true
+    title: Become a web designer
   become_writer:
     output: true
 
