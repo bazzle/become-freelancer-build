@@ -1,10 +1,10 @@
 ---
-title: Books to Buy
-slug: books-to-buy
-style: style-3
-section_links:
- Setup Browsersync: "setup-browsersync"
- Setup Grunt: "setup-grunt"
+layout: post
+author: Barry
+title: Modular Javascript
+hero_image: web-design.jpg
+hero_image_alt: Devices running browsersync
+date: 2019-06-10
 ---
 
 With each web page, device and browser, testing time grows exponentially. From live reloads to URL pushing, form replication to click mirroring, Browsersync cuts out repetitive manual tasks. It’s like an extra pair of hands. Customise an array of sync settings from the UI or command line to create a personalised test environment. Need more control? Browsersync is easily integrated with your web platform, build tools, and other Node.js projects.

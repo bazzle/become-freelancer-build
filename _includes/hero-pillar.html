@@ -34,9 +34,7 @@
             <div class="contents-image__contents">
                 <h3 class="contents-image__contents__title">On this page</h3>
                 <ul class="contents-image__contents__list">
-                  {% for section in sorted_sections %}
-                  <li><a href="#{{ section.slug }}">{{ section.title }}</a></li>
-                  {% endfor %}
+                  {% include pillar-nav.html %}
                 </ul>
             </div>
             <div class="contents-image__image">

@@ -7,7 +7,9 @@
             >From the guide:
           </span>
           <a href="{{ page.guide_link }}" class="guide-feature-small__title__title">
-            {{site.collections.become_web_designer.title}}
+            {% assign this_collection = section.collection %}
+            {% assign thetitle = site.collections | where: "label", this_collection | first %}
+            {{ thetitle.label }}
           </a>
         </h4>
           <div class="guide-feature-small__button">

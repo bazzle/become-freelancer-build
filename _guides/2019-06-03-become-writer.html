@@ -1,5 +1,5 @@
 ---
-layout: pillar
+layout: default
 title: How to become a Writer
 guide_slug: become_writer
 author: Rob
@@ -10,7 +10,9 @@ hero_image_alt: Devices running browsersync
 intro: Writing, and especially fiction writing, can seem like a mysterious art, even to those who practice it. So if you're starting from nowhere, it may take some work to convince yourself you can do it. Yet, in all honesty, becoming a writer is not a difficult matter. To become a best-selling novelist or win the Booker Prize may be difficult. But to become a writer or even a published writer is relatively easy.
 ---
 
-{% assign sorted_sections = site.become_writer | sort:"date" | reverse %}
+{% include progress-indicator.html %}
+
+{% assign sorted_sections = site.become_writer_sections | sort:"date" | reverse %}
 
 {% include page-nav.html %}
 

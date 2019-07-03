@@ -1,5 +1,5 @@
 ---
-layout: post-index
+layout: default
 title: Blog
 permalink: /blog
 ---
@@ -13,21 +13,18 @@ permalink: /blog
 
       <div class="post-index__grid">
 
-        {% for post in site.posts %}
+        {% for post in site.blog %}
 
         <article class="grid__item post-index__item">
 
             {% assign content_array = post.content | split: site.excerpt_separator %}
             {% assign excerpt_only = content_array | first %}
 
-
-
-
                 <div class="post-index__item__grid">
 
                   <div class="grid__item">
                     <div class="post-index__item__image">
-                      <a href="{{ site.url }}/{{post.permalink}}">
+                      <a href="{{ post.url }}">
                         <img src="{{site.url}}/assets/images/{{ post.hero_image }}" class="guide-feature-large__image" src="{{ post.hero_image_alt }}" />
                       </a>
                     </div>
@@ -37,7 +34,7 @@ permalink: /blog
                     <div class="post-index__item__content">
 
                         <h1 class="post-index__item__title">
-                          <a href="{{ site.url }}/{{post.permalink}}.html">
+                          <a href="{{ post.url }}">
                             {{ post.title }}
                           </a>
                         </h1>

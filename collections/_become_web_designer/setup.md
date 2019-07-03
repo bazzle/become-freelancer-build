@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Setup Grunt
 author: Barry
-permalink: setup-grunt
-hero_image: browsersync.gif
-hero_image_alt: Devices running Grunt
+title: Setup
+hero_image: web-design.jpg
+hero_image_alt: Devices running browsersync
+date: 2019-06-10
 ---
 
-Grunt is a command line Javascript task runner utilizing Node.js platform. It runs custom defined repetitious tasks and manages process automation. The project’s homepage lists many big players in software development that use Grunt in their development as part of continuous integration workflow.
+With each web page, device and browser, testing time grows exponentially. From live reloads to URL pushing, form replication to click mirroring, Browsersync cuts out repetitive manual tasks. It’s like an extra pair of hands. Customise an array of sync settings from the UI or command line to create a personalised test environment. Need more control? Browsersync is easily integrated with your web platform, build tools, and other Node.js projects.
 <!--more-->
 
 ### Key Feature
@@ -37,13 +37,13 @@ gulp.task(‘browser-sync’, function() {
  });
 });
 ```
-> And run this comment : gulp browser-sync
+
+And run this command
+
+```javascript
+gulp browser-sync
+```
 
 ### How does BrowserSync Work?
 
 First off, BrowserSync creates a small server, but if you already have a server setup, BrowserSync can hook into that server and act as a proxy. Next, it injects a javascript file on every page; This file makes use of WebSockets to communicate between the server and the client to watch changes to your code or browser action. As soon as BrowserSync detects an action it performs a page reload.
-
-
-
-
-

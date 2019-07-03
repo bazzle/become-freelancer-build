@@ -1,8 +1,8 @@
 ---
-title: Setup
-slug: setup
-style: style-2
-menu_links:
+title: Books to Buy
+slug: books-to-buy
+style: style-3
+links:
  Setup Browsersync: "setup-browsersync"
  Setup Grunt: "setup-grunt"
 ---
@@ -37,12 +37,7 @@ gulp.task(‘browser-sync’, function() {
  });
 });
 ```
-
-And run this command
-
-```javascript
-gulp browser-sync
-```
+> And run this comment : gulp browser-sync
 
 ### How does BrowserSync Work?
 

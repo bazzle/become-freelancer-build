@@ -1,0 +1,6 @@
+{% assign this_collection_posts = section.collection | remove: '_sections' %}
+{% for post in site.[this_collection_posts] %}
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+{% endfor %}
