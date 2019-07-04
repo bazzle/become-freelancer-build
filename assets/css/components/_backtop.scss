@@ -2,7 +2,7 @@
 .backtop {
     $color_text: $color-primary;
     $color_bg: $white;
-    $color_bg_darken: darken($color_bg, 3);
+    $color_bg_darken: darken($color_bg, 8);
     border-radius: $border-radius $border-radius 0 0;
     text-align: center;
     position: sticky;
@@ -11,10 +11,9 @@
     padding-right:5vw;
     bottom:-1px;
     left: 0;
-    cursor: pointer;
     color: $color-text;
     @include align-right;
-    @include transitions(0.2s, linear, background-color, opacity, top);
+    background-color:$color_bg_darken;
     &__inner{
         height:100%;
         position:relative;
@@ -44,10 +43,23 @@
         }
         padding:1em 1.7em;
         @include align-center;
-        background-color:$white;
+        background-color:$color_bg_darken;
         border-radius: $border-radius;
+        span {
+            @include link-styled;
+            display:inline-block;
+            margin-left:1em;
+            color:$black;
+             @include transition;
+        }
         &:hover {
-        background-color: $color_bg;
+            background-color: $white;
+            span {
+                @include link-styled;
+                display:inline-block;
+                margin-left:1em;
+                color:$color-primary;
+            }
             .backtop__icon {
                 @keyframes pulse {
                     0% {
@@ -72,10 +84,5 @@
         color: $color-text;
         width: 30px;
         height: 30px;
-    }
-    span {
-        @include link-styled;
-        display:inline-block;
-        margin-left:1em;
     }
 }

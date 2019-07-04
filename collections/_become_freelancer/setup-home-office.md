@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Barry
-title: Setup
+title: Setup home office
 hero_image: web-design.jpg
 hero_image_alt: Devices running browsersync
 date: 2019-06-10

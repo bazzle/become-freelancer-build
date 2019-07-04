@@ -1,10 +1,10 @@
 ---
+layout: post
+author: Barry
 title: First steps
-slug: first-steps
-style: style-3
-links:
- Setup Browsersync: "setup-browsersync"
- Setup Grunt: "setup-grunt"
+hero_image: web-design.jpg
+hero_image_alt: Devices running browsersync
+date: 2019-06-10
 ---
 
 Recently, I received three emails from people, each of whom want to become a writer. They all expressed very typical concerns. Below is what they said and how I would answer them.

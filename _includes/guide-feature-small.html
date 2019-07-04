@@ -1,24 +1,25 @@
 <div class="guide-feature-small">
+  {% assign parentpage =  site.pages | where: "pillar_id","pillar_1" | first %}
+  {% assign title = parentpage.title %}
+  {% capture link %} {{site.url}}/{{parentpage.permalink}} {% endcapture %}
+  {% capture image %} {{site.url}}/assets/images/{{parentpage.thumb_image}} {% endcapture %}
+  {% assign image_alt = parentpage.thumb_image-alt %}
   <div class="floating-snippet floating-snippet--tight">
     <div class="guide-feature-small__inner">
       <div class="guide-feature-small__content">
         <h4 class="guide-feature-small__title">
-          <span class="guide-feature-small__title__tagline"
-            >From the guide:
-          </span>
-          <a href="{{ page.guide_link }}" class="guide-feature-small__title__title">
-            {% assign this_collection = section.collection %}
-            {% assign thetitle = site.collections | where: "label", this_collection | first %}
-            {{ thetitle.label }}
+          <span class="guide-feature-small__title__tagline">From the guide:</span>
+          <a href="{{ link }}" class="guide-feature-small__title__title">
+            {{ title }}
           </a>
         </h4>
           <div class="guide-feature-small__button">
-            <a href="{{ page.guide_link }}" class="button button--small">Go to guide</a>
+            <a href="{{ link }}" class="button button--small">Go to guide</a>
           </div>
       </div>
       <div class="guide-feature-small__image">
-        <a href="{{ page.guide_link }}">
-          <img src="{{site.url}}/assets/images/web-design-thumb.jpg" class="guide-feature-small__image" />
+        <a href="{{ link }}">
+          <img src="{{ image }}" class="guide-feature-small__image" alt="{{ image_alt }}" />
         </a>
       </div>
     </div>

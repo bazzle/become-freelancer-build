@@ -49,10 +49,6 @@
     color:$color-text;
     width:100%; 
     max-width:$content-width;
-    padding-bottom:$text-gap-mobile;
-    @include break(small) {
-      padding-bottom:$text-gap;
-    }
     p{
       @include text-leadin(1.8rem);
       @include break(medium) {
@@ -85,9 +81,9 @@
   }
   &__feature{
     max-width:500px;
-    padding-bottom:$text-gap-mobile;
-    @include break(medium) {
-      padding-bottom:0;
+    padding-top:$text-gap-mobile;
+    @include break(small) {
+      padding-top:$text-gap;
     }
   }
   &__arrow-icon{

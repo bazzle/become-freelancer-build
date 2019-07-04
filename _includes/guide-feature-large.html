@@ -1,4 +1,10 @@
 <div class="guide-feature-large">
+  {% assign parentpage =  site.pages | where: "pillar_id","pillar_1" | first %}
+  {% assign title = parentpage.title %}
+  {% capture link %} {{site.url}}/{{parentpage.permalink}} {% endcapture %}
+  {% capture image %} {{site.url}}/assets/images/{{parentpage.thumb_image}} {% endcapture %}
+  {% assign image_alt = parentpage.thumb_image-alt %}
+  {% assign intro = parentpage.intro %}
   <div class="panel">
     <div class="panel__container">
 
@@ -7,8 +13,8 @@
 
           <div class="grid__item">
             <div class="guide-feature-large__image">
-              <a href="pillar.html">
-                <img src="{{site.url}}/assets/images/web-design-thumb.jpg" class="guide-feature-large__image" />
+              <a href="{{ link }}">
+                <img src="{{ image }}" class="guide-feature-large__image" alt="{{ image_alt }}" />
               </a>
             </div>
           </div>
@@ -17,14 +23,14 @@
               
               <h4 class="guide-feature-large__title">
                 <span class="guide-feature-large__title__tagline">From the guide:</span>
-                <a href="/" class="guide-feature-large__title__title">How to become a web designer</a>
+                <a href="{{ link }}" class="guide-feature-large__title__title">{{ title }}</a>
               </h4>
               <div class="guide-feature-large__intro">
                 <p>
-                  Short into about the page. Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio. Short into about the page. Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio. doloribus asperiores repellat. At vero eos et accusamus et iusto odio
+                  {{ intro }}
                 </p>
               </div>
-              <a href="/" class="button">Go to guide</a>
+              <a href="{{ link }}" class="button">Go to guide</a>
 
             </div>
           </div>

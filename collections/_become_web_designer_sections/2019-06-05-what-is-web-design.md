@@ -1,10 +1,8 @@
 ---
-layout: post
-author: Barry
-title: What is Web Design
-hero_image: web-design.jpg
-hero_image_alt: Devices running browsersync
-date: 2019-06-10
+title: What is web design
+slug: what-is-web-design
+links:
+ Preprocessors: "how-to-become-a-web-designer/preprocessors"
 ---
 
 Web design refers to the design of websites that are displayed on the internet. It usually refers to the user experience aspects of website development rather than software development. Web design used to be focused on designing websites for desktop browsers; however, since the mid-2010s, design for mobile and tablet browsers has become ever-increasingly important.

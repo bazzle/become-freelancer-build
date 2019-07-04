@@ -1,10 +1,6 @@
 ---
-title: Books to Buy
-slug: books-to-buy
-style: style-3
-section_links:
- Setup Browsersync: "setup-browsersync"
- Setup Grunt: "setup-grunt"
+title: What is freelancing
+slug: what-is-freelancing
 ---
 
 With each web page, device and browser, testing time grows exponentially. From live reloads to URL pushing, form replication to click mirroring, Browsersync cuts out repetitive manual tasks. It’s like an extra pair of hands. Customise an array of sync settings from the UI or command line to create a personalised test environment. Need more control? Browsersync is easily integrated with your web platform, build tools, and other Node.js projects.
@@ -37,7 +33,12 @@ gulp.task(‘browser-sync’, function() {
  });
 });
 ```
-> And run this comment : gulp browser-sync
+
+And run this command
+
+```javascript
+gulp browser-sync
+```
 
 ### How does BrowserSync Work?
 

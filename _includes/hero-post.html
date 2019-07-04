@@ -18,11 +18,11 @@
             <div class="hero-post__intro">
               {{ excerpt_only | append: '</p>'}}
             </div>
-            <div class="hero-post__feature">
             {% if page.from_guide %}
-              {% include guide-feature-small.html guide="how_to_become_a_web_designer" %}
+            <div class="hero-post__feature">
+              {% include guide-feature-small.html %}
+            </div>
             {% endif %}
-          </div>
           </div>
         </div>
 

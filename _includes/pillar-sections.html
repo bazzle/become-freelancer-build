@@ -17,21 +17,32 @@
               <div class="pillar-section__content body-content">
                 {{ section.content | markdownify }}
               </div>
+
+              {% if section.links or section.links_ext %}
+              <div class="pillar-section__links">
+                <h3 class="pillar-section__links__title">Section links</h3>
+                <ul class="pillar-section__links__list">
+                  {% if section.links %}
+                  {% for section_links in section.links %}
+                  {% assign collection_posts = section.collection | remove: "_sections" %}
+                    <li>
+                      <a href="{{ site.url }}/{{ section_links[1] }}">{{ section_links[0] }}</a>
+                    </li>
+                  {% endfor %}
+                  {% endif %}
+                  {% if section.links_ext %}
+                    {% for section_links in section.links_ext %}
+                    <li>
+                      <a target="_blank" href="{{ section_links[1] }}">{{ section_links[0] }}</a>
+                    </li>
+                    {% endfor %}
+                  {% endif %}
+                </ul>
+              </div>
+              {% endif %}
+            
             
             </div>
-          </div>
-        </div>
-
-        <div class="panel pillar-section__links">
-          <div class="panel__container">
-          <h3 class="pillar-section__links__title">Section links</h3>
-          <ul class="pillar-section__links__list">
-            {% for item in section.links %}
-              <li>
-                <a href="{{ item.url }}">{{ item.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
           </div>
         </div>
 

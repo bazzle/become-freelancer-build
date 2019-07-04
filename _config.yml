@@ -4,8 +4,8 @@ collections_dir: collections
 collections:
   become_freelancer:
     output: true
-    title: Become a freelancer
-    permalink: /become-a-freelancer/:path/
+    title: How to become a Freelancer
+    permalink: /how-to-become-a-freelancer/:path/
 
   become_freelancer_sections:
     output: true
@@ -13,23 +13,23 @@ collections:
   become_web_designer:
     label: become_web_designer
     output: true
-    title: Become a web designer
-    permalink: /become-a-web-designer/:path/
+    title: How to become a Web designer
+    permalink: /how-to-become-a-web-designer/:path/
 
   become_web_designer_sections:
     output: true
 
   become_writer:
     output: true
-    title: Become a writer
-    permalink: /become-a-writer/:path/
+    title: How to become a Writer
+    permalink: /how-to-become-a-writer/:path/
 
   become_writer_sections:
     output: true
 
   blog:
     output: true
-    title: Become a writer
+    title: Blog
     permalink: /blog/:path/
 
 excerpt_separator: <!--more-->

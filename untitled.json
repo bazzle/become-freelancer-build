@@ -1,0 +1,16 @@
+{
+    "layout": "default",
+    "title": "How to become a Web Designer",
+    "author": "Barry",
+    "permalink": "how-to-become-a-web-designer",
+    "slug": "how_to_become_a_web_designer",
+    "hero_image": "content-2.jpg",
+    "hero_image_alt": "Devices running browsersync",
+    "date": "2019-06-10",
+    "intro": "So if you've decided to become a web designer, where do you start? Good question. This resource could be your starting point. What is web design? it sounds obvious, but actually there is a lot of ambiguity. You could say web design is a general term that encompasses everything from UX design to front-end development. We go over that in the first section. Grab your favourite hot drink, croissant or perhaps pain au chocolat and read on.",
+    "content": "{% include progress-indicator.html %}\n\n{% assign sorted_sections = site.become_web_designer_sections | sort:\"date\" | reverse %}\n\n{% include page-nav.html %}\n\n{% include hero-pillar.html %}\n\n{% include pillar-sections.html %}",
+    "dir": "/",
+    "name": "2019-06-03-become-web-designer.html",
+    "path": "_guides/2019-06-03-become-web-designer.html",
+    "url": "/how-to-become-a-web-designer"
+}

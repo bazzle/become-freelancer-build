@@ -1,10 +1,11 @@
 ---
-title: Books to Buy
-slug: books-to-buy
-style: style-3
+title: Time to get reading
+slug: time-to-get-reading
 links:
- Setup Browsersync: "setup-browsersync"
- Setup Grunt: "setup-grunt"
+ Books to buy: "how-to-become-a-web-designer/books-to-buy"
+links_ext:
+ 10 Business Books Every Freelancer Should Read In 2017: "https://www.forbes.com/sites/abdullahimuhammed/2017/06/30/10-business-books-every-freelancer-should-read-in-2017/"
+ 8 Game-changing books for freelancers: "https://medium.com/@scottcgreer/8-game-changing-books-for-freelancers-dde6637d7003"
 ---
 
 With each web page, device and browser, testing time grows exponentially. From live reloads to URL pushing, form replication to click mirroring, Browsersync cuts out repetitive manual tasks. It’s like an extra pair of hands. Customise an array of sync settings from the UI or command line to create a personalised test environment. Need more control? Browsersync is easily integrated with your web platform, build tools, and other Node.js projects.

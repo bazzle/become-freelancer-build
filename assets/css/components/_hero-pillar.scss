@@ -10,6 +10,7 @@
   min-height:calc(100vh - #{$header-height});
   color:$color-primary;
   border-bottom:20px solid $color-to;
+  z-index:1;
   @include break(medium) {
     min-height:0;
   }
