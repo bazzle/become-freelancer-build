@@ -47,11 +47,14 @@
     &__menu{
         display:none;
         @include break(large) {
-            display:flex;
-            align-items:center;
+            display:block;
             margin-left:auto;
         }
         .nav{
+            &__list{
+                display:flex;
+                align-items:center;
+            }
             &__item{
                 margin-left:2em;
                 a{

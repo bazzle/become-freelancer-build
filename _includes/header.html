@@ -12,13 +12,13 @@
         {% include navigation.html main=true guides=true %}
       </nav>
 
-      <a href="#" class="header__trigger trigger-menu" role="button">
+      <button type=“button” class="header__trigger trigger-menu">
           <svg class="icon header__trigger__icon">
             <use xlink:href="{{site.url}}/assets/svg/icons.svg#icon-menu" />
           </svg>
           <span class="header__trigger__label">Menu</span>
-      </a>
-      <nav class="mobile-menu close">
+      </button>
+      <nav aria-hidden='true' class="mobile-menu close">
         {% include mobile-menu.html %}
       </nav>
 

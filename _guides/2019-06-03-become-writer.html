@@ -18,8 +18,10 @@ intro: Writing, and especially fiction writing, can seem like a mysterious art, 
 
 {% assign sorted_sections = site.become_writer_sections | sort:"date" | reverse %}
 
-{% include page-nav.html %}
-
-{% include hero-pillar.html %}
-
-{% include pillar-sections.html %}
+<article>
+  <header>
+  {% include page-nav.html %}
+  {% include hero-pillar.html %}
+  </header>
+  {% include pillar-sections.html %}
+</article>

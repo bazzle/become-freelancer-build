@@ -13,17 +13,39 @@
   transform:translateX(100%);
   border-top:$border-feint;
   opacity:0;
-  @include transition(transform, .2s);
   height:calc(100vh - #{$header-height});
-  &.open{
-    @include transition(transform, .2s);
-    transform:translateX(0);
-    opacity:1;
+  @keyframes movein{
+    from{
+      transform:translateX(100%);
+      opacity:0;
+    }
+    to{
+      transform:translateX(0);
+      opacity:1;
+    }
   }
-  .close{
-    @include transition(transform, .2s);
-    transform:translateX(100%);
-    opacity:0;
+  @keyframes moveout{
+    from{
+      transform:translateX(0);
+      opacity:1;
+    }
+    to{
+      transform:translateX(100%);
+      opacity:0;
+    }
+  }
+
+  &.open{
+    animation-name:movein;
+    animation-duration:.2s;
+    animation-fill-mode:forwards;
+    animation-direction:normal;
+  }
+  &.close{
+    animation-name:moveout;
+    animation-duration:.2s;
+    animation-fill-mode:forwards;
+    animation-direction:normal;
   }
   &__inner{
     padding-top:$text-gap-mobile;
