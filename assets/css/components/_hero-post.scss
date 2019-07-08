@@ -7,7 +7,6 @@
   background-color:$color-from;
   position:relative;
   height:100%;
-  min-height:calc(100vh - #{$header-height});
   color:$color-primary;
   border-bottom:20px solid $color-to;
   padding-top:$text-gap;
@@ -24,7 +23,6 @@
       display:flex;
       flex-direction:column;
       justify-content: flex-end;
-      padding-top:$text-gap-deep;
     }
   }
   &__title{
@@ -49,6 +47,10 @@
     color:$color-text;
     width:100%; 
     max-width:$content-width;
+    padding-bottom:$text-gap-mobile;
+    @include break(medium) {
+      padding-bottom:0;
+    }
     p{
       @include text-leadin(1.8rem);
       @include break(medium) {
@@ -66,7 +68,6 @@
   }
   &__image{
     @include break(medium) {
-        margin-bottom:$text-gap;
         height:100%;
     }
     img{
@@ -81,9 +82,10 @@
   }
   &__feature{
     max-width:500px;
-    padding-top:$text-gap-mobile;
-    @include break(small) {
+    padding-bottom:$text-gap-mobile;
+    @include break(medium) {
       padding-top:$text-gap;
+      padding-bottom:0;
     }
   }
   &__arrow-icon{

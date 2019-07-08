@@ -10,4 +10,10 @@
           padding-left:0;
       }
   }
+  &__name{
+    font-weight:$std-bold;
+  }
+  &__date{
+    font-weight:$std-bold;
+  }
 }

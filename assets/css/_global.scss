@@ -107,9 +107,9 @@ html{
   font-family:$font-standout;
   font-weight:$std-bold;
   font-size:$font-size;
-  line-height: 1.4;
+  line-height: 1.6;
   p{
-    line-height: 1.4;
+    line-height: 1.6;
   }
 }
 
@@ -129,7 +129,6 @@ html{
   font-size:$font-size-std;
   font-family:$font-std;
   line-height:$line-height;
-  font-weight:$extrabold;
 }
 
 @mixin text-tiny{

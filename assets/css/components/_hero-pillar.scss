@@ -61,9 +61,9 @@
     width:100%;
     max-width:$content-width;
     p{
-      @include text-leadin(2rem);
-      @include break(small) {
-        @include text-leadin;  
+      @include text-leadin(1.8rem);
+      @include break(medium) {
+        @include text-leadin(1.8rem);
       }
     }
   }
